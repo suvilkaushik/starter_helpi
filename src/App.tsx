@@ -2,7 +2,7 @@ import React, { useState } from "react";
 //import logo from "./logo.svg";
 import "./App.css";
 import { Button, Form } from "react-bootstrap";
-import { BrowserRouter, Routes, Route, Router, useNavigate, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Basic from './components/pages/Basic.tsx';
 import Detailed from './components/pages/Detailed.tsx';
 import ToDetailedButton from './components/buttons/ToDetailedButton.tsx';
@@ -33,12 +33,6 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-  
-  function handleQuizButtonClick(){
-    setIsQuizButtonClicked(!isQuizButtonClicked);
-  };
-
-
 
 
   return (
@@ -53,7 +47,7 @@ function App() {
       <div>
       {!isQuizButtonClicked && <ToDetailedButton isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToDetailedButton>}
       {!isQuizButtonClicked && <ToBasicButton  isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToBasicButton>}
-      {isQuizButtonClicked && <Basic></Basic>}
+      {/* {isQuizButtonClicked && <toHomeButton></toHomeButton>} */}
       </div>
       
       

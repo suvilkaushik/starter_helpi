@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
-import Basic from '../pages/Basic.tsx';
+import { useNavigate } from 'react-router-dom';
 
 interface toBasicButtonProps {
   isQuizButtonClicked: boolean;
