@@ -28,6 +28,16 @@
   color: #61dafb;
 }
 
+.quizButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.quizButtonContainer div p {
+  margin:20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

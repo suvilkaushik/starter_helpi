@@ -20,7 +20,16 @@ function ToBasicButton ({ isQuizButtonClicked, setIsQuizButtonClicked }: toBasic
   };
 
   return (
-      <Button variant = "secondary" onClick = { handleQuizButtonClick } > Basic Quiz</Button >
+    <Button 
+    variant="secondary" 
+    onClick={handleQuizButtonClick} 
+    style={{ 
+      padding: '20px', 
+      fontSize: '20px'
+    }}
+  >
+    Basic Quiz
+  </Button>
 
   );
 };
