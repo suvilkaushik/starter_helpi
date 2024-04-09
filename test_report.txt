@@ -162,7 +162,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:12:31)
+        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:11:29)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -280,7 +280,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:11:29)
+        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:12:31)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -520,7 +520,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:12:31)
+        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:11:29)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -641,7 +641,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:11:29)
+        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:12:31)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -761,9 +761,10 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
   console.error
-    The above error occurred in the <ToDetailedButton> component:
+    The above error occurred in the <ToBasicButton> component:
     
-        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:11:29)
+        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:10:27)
+        at div
         at div
         at div
         at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:33)
@@ -803,9 +804,10 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
   console.error
-    The above error occurred in the <ToBasicButton> component:
+    The above error occurred in the <ToDetailedButton> component:
     
-        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:10:27)
+        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:11:29)
+        at div
         at div
         at div
         at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:33)
@@ -845,7 +847,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (242 ms)
+  ✕ renders learn react link (215 ms)
 
   ● renders learn react link
 
@@ -901,5 +903,5 @@ All files               |   23.68 |       50 |   23.07 |   23.68 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.38 s
+Time:        2.385 s
 Ran all test suites.
