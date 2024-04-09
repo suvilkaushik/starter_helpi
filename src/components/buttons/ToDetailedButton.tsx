@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Routes, useNavigate } from 'react-router-dom';
 
 
 interface toDetailedButtonProps {
@@ -19,10 +19,13 @@ function ToDetailedButton({ isQuizButtonClicked, setIsQuizButtonClicked }: toDet
         setIsQuizButtonClicked(true);
         routeChange();
     };
+  
+
 
     return (
-        <Button variant = "secondary" onClick = { handleQuizButtonClick } > Detailed Quiz</Button >
-
+        <div>
+            <Button variant="secondary" onClick={handleQuizButtonClick}>Detailed Quiz</Button>
+        </div>
     );
 };
 
