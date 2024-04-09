@@ -120,19 +120,23 @@ function Basic() {
       {questions[currentQuestionState]}
       <Button
         onClick={() => {
-          setCurrentQuestion((currentQuestionState - 1) % questions.length);
+          setCurrentQuestion(currentQuestionState - 1);
         }}
+        disabled={currentQuestionState === 0}
       >
         Previous Question
       </Button>
       <Button
         onClick={() => {
-          setCurrentQuestion((currentQuestionState + 1) % questions.length);
+          setCurrentQuestion(currentQuestionState + 1);
         }}
+        disabled={currentQuestionState === questions.length - 1}
       >
         Next Question
       </Button>
-      {questionProgress}
+      <br />
+      On Question {currentQuestionState + 1}
+      <br /> Questions answered {questionProgress}/{numberOfQuestions}
     </div>
   );
 }
