@@ -23,9 +23,14 @@ function ToDetailedButton({ isQuizButtonClicked, setIsQuizButtonClicked }: toDet
 
 
     return (
-        <div>
-            <Button variant="secondary" onClick={handleQuizButtonClick}>Detailed Quiz</Button>
-        </div>
+        <Button 
+        variant = "secondary" 
+        onClick = { handleQuizButtonClick }    
+         style={{ 
+            padding: '20px', 
+            fontSize: '20px'
+          }}> Detailed Quiz</Button >
+
     );
 };
 
