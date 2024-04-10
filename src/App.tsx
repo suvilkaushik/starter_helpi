@@ -41,18 +41,19 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/Basic" element={<Basic />} />
-        <Route path="/Detailed" element={<Detailed />} />
-      </Routes>
-      {!isHomeButtonClicked && <ToHomeButton
-      isQuizButtonClicked={isQuizButtonClicked}
-      setIsQuizButtonClicked={setIsQuizButtonClicked}
-      isHomeButtonClicked={isHomeButtonClicked}
-      setIsHomeButtonClicked={setIsHomeButtonClicked}
-      ></ToHomeButton>}
-    
+    <Routes>
+      <Route path="/Basic" element={<Basic />} />
+      <Route path="/Detailed" element={<Detailed />} />
+
+    </Routes>
+      
     <div className="quizButtonContainer">
+      {!isHomeButtonClicked && <ToHomeButton
+          isQuizButtonClicked={isQuizButtonClicked}
+          setIsQuizButtonClicked={setIsQuizButtonClicked}
+          isHomeButtonClicked={isHomeButtonClicked}
+          setIsHomeButtonClicked={setIsHomeButtonClicked}
+      ></ToHomeButton>}
         {!isQuizButtonClicked && (
           <div>
             <h1>Go to Basic Questions</h1>
@@ -92,19 +93,19 @@ function App() {
         </div>)}
       </div>
       
-      <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Insert API Key Here"
-          onChange={changeKey}
-        />
-        <br />
-        <Button className="Submit-Button" onClick={handleSubmit}>
-          Submit
-        </Button>
-      </Form>
-    </div>
+    <Form>
+      <Form.Label>API Key:</Form.Label>
+      <Form.Control
+        type="password"
+        placeholder="Insert API Key Here"
+        onChange={changeKey}
+      />
+      <br />
+      <Button className="Submit-Button" onClick={handleSubmit}>
+        Submit
+      </Button>
+    </Form>
+  </div>
   );
 }
 
