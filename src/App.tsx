@@ -39,26 +39,68 @@ function App() {
 
 
   return (
-
     <div className="App">
-    <Routes>
-      <Route path="/Basic" element={<Basic />} />
-      <Route path="/Detailed" element={<Detailed />} />
+      <Routes>
+        <Route path="/Basic" element={<Basic />} />
+        <Route path="/Detailed" element={<Detailed />} />
+      </Routes>
 
+<<<<<<< HEAD
     </Routes>
       
-      <div>
-        {/* !isHomeButtonClicked && */}
-      {!isHomeButtonClicked && <ToHomeButton isHomeButtonClicked={isHomeButtonClicked} setIsHomeButtonClicked={setIsHomeButtonClicked} isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToHomeButton>}
-      {!isQuizButtonClicked && <ToDetailedButton isHomeButtonClicked={isHomeButtonClicked} setIsHomeButtonClicked={setIsHomeButtonClicked} isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToDetailedButton>}
-      {!isQuizButtonClicked && <ToBasicButton  isHomeButtonClicked={isHomeButtonClicked} setIsHomeButtonClicked={setIsHomeButtonClicked} isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToBasicButton>}
-      {/* {isQuizButtonClicked && <toHomeButton></toHomeButton>} */}
+    <div className="quizButtonContainer">
+      {!isHomeButtonClicked && <ToHomeButton
+          isQuizButtonClicked={isQuizButtonClicked}
+          setIsQuizButtonClicked={setIsQuizButtonClicked}
+          isHomeButtonClicked={isHomeButtonClicked}
+          setIsHomeButtonClicked={setIsHomeButtonClicked}
+      ></ToHomeButton>}
+=======
+      <div className="quizButtonContainer">
+>>>>>>> cb5f3b4ca458fd056f0e24374efaec27c6f2ac99
+        {!isQuizButtonClicked && (
+          <div>
+            <h1>Go to Basic Questions</h1>
+            <p>
+              Designed to help you explore various career options based on your
+              interests, skills, and personality traits. The quiz consists of
+              multiple-choice questions with straightforward options related to
+              different fields and professions. The goal is to provide you with a
+              general idea of potential career paths that align with your
+              preferences.
+            </p>
+            <ToBasicButton
+              isQuizButtonClicked={isQuizButtonClicked}
+              setIsQuizButtonClicked={setIsQuizButtonClicked}
+<<<<<<< HEAD
+              isHomeButtonClicked={isHomeButtonClicked}
+              setIsHomeButtonClicked={setIsHomeButtonClicked}
+=======
+>>>>>>> cb5f3b4ca458fd056f0e24374efaec27c6f2ac99
+            ></ToBasicButton>
+          </div>
+        )}
+        {!isQuizButtonClicked && (
+        <div>
+          <h1>Go to Detailed Questions</h1>
+          <p>
+            Evaluates your interests, strengths, values, skills, and career goals.
+            It includes a combination of multiple-choice, open-ended, and
+            situational questions to provide a thorough analysis of your
+            suitability for various professions. The quiz also considers factors
+            such as work-life balance, salary expectations, and career growth
+            opportunities.
+          </p>
+            <ToDetailedButton
+              isQuizButtonClicked={isQuizButtonClicked}
+              setIsQuizButtonClicked={setIsQuizButtonClicked}
+<<<<<<< HEAD
+              isHomeButtonClicked={isHomeButtonClicked}
+              setIsHomeButtonClicked={setIsHomeButtonClicked}
+            ></ToDetailedButton>
+        </div>)}
       </div>
       
-      
-
-
-
     <Form>
       <Form.Label>API Key:</Form.Label>
       <Form.Control
@@ -72,6 +114,25 @@ function App() {
       </Button>
     </Form>
   </div>
+=======
+            ></ToDetailedButton>
+        </div>)}
+      </div>
+
+      <Form>
+        <Form.Label>API Key:</Form.Label>
+        <Form.Control
+          type="password"
+          placeholder="Insert API Key Here"
+          onChange={changeKey}
+        />
+        <br />
+        <Button className="Submit-Button" onClick={handleSubmit}>
+          Submit
+        </Button>
+      </Form>
+    </div>
+>>>>>>> cb5f3b4ca458fd056f0e24374efaec27c6f2ac99
   );
 }
 
