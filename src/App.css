@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.custom-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
