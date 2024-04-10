@@ -1,13 +1,14 @@
-import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 interface toBasicButtonProps {
+  isHomeButtonClicked: boolean;
+  setIsHomeButtonClicked: (isHomeButtonClicked: boolean) => void;
   isQuizButtonClicked: boolean;
   setIsQuizButtonClicked: (isQuizButtonClicked: boolean) => void;
 }
 
-function ToBasicButton ({ isQuizButtonClicked, setIsQuizButtonClicked }: toBasicButtonProps) {
+function ToBasicButton ({ isQuizButtonClicked, setIsQuizButtonClicked, isHomeButtonClicked, setIsHomeButtonClicked }: toBasicButtonProps) {
   let navigate = useNavigate();
   const routeChange = () => {
       let path = '/Basic';
@@ -15,8 +16,9 @@ function ToBasicButton ({ isQuizButtonClicked, setIsQuizButtonClicked }: toBasic
   }
 
   function handleQuizButtonClick() {
-      setIsQuizButtonClicked(true);
-      routeChange();
+    setIsHomeButtonClicked(!isHomeButtonClicked);
+    setIsQuizButtonClicked(!isQuizButtonClicked);
+  routeChange();
   };
 
   return (

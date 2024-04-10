@@ -7,6 +7,7 @@ import Basic from './components/pages/Basic.tsx';
 import Detailed from './components/pages/Detailed.tsx';
 import ToDetailedButton from './components/buttons/ToDetailedButton.tsx';
 import ToBasicButton from './components/buttons/ToBasicButton.tsx';
+import ToHomeButton from "./components/buttons/ToHomeButton.tsx";
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -22,6 +23,9 @@ if (prevKey !== null) {
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [isQuizButtonClicked, setIsQuizButtonClicked] = useState<boolean>(false);
+  const [isHomeButtonClicked, setIsHomeButtonClicked] = useState<boolean>(true);
+
+
 
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
@@ -37,12 +41,19 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/Basic" element={<Basic />} />
-        <Route path="/Detailed" element={<Detailed />} />
-      </Routes>
+    <Routes>
+      <Route path="/Basic" element={<Basic />} />
+      <Route path="/Detailed" element={<Detailed />} />
 
-      <div className="quizButtonContainer">
+    </Routes>
+      
+    <div className="quizButtonContainer">
+      {!isHomeButtonClicked && <ToHomeButton
+          isQuizButtonClicked={isQuizButtonClicked}
+          setIsQuizButtonClicked={setIsQuizButtonClicked}
+          isHomeButtonClicked={isHomeButtonClicked}
+          setIsHomeButtonClicked={setIsHomeButtonClicked}
+      ></ToHomeButton>}
         {!isQuizButtonClicked && (
           <div>
             <h1>Go to Basic Questions</h1>
@@ -57,6 +68,8 @@ function App() {
             <ToBasicButton
               isQuizButtonClicked={isQuizButtonClicked}
               setIsQuizButtonClicked={setIsQuizButtonClicked}
+              isHomeButtonClicked={isHomeButtonClicked}
+              setIsHomeButtonClicked={setIsHomeButtonClicked}
             ></ToBasicButton>
           </div>
         )}
@@ -74,23 +87,25 @@ function App() {
             <ToDetailedButton
               isQuizButtonClicked={isQuizButtonClicked}
               setIsQuizButtonClicked={setIsQuizButtonClicked}
+              isHomeButtonClicked={isHomeButtonClicked}
+              setIsHomeButtonClicked={setIsHomeButtonClicked}
             ></ToDetailedButton>
         </div>)}
       </div>
-
-      <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Insert API Key Here"
-          onChange={changeKey}
-        />
-        <br />
-        <Button className="Submit-Button" onClick={handleSubmit}>
-          Submit
-        </Button>
-      </Form>
-    </div>
+      
+    <Form>
+      <Form.Label>API Key:</Form.Label>
+      <Form.Control
+        type="password"
+        placeholder="Insert API Key Here"
+        onChange={changeKey}
+      />
+      <br />
+      <Button className="Submit-Button" onClick={handleSubmit}>
+        Submit
+      </Button>
+    </Form>
+  </div>
   );
 }
 
