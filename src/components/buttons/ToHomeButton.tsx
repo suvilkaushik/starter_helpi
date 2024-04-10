@@ -1,6 +1,9 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import ToDetailedButton from './ToDetailedButton';
+import ToBasicButton from './ToBasicButton';
+
 
 interface toHomeButtonProps {
     isHomeButtonClicked: boolean;
@@ -9,7 +12,7 @@ interface toHomeButtonProps {
     setIsQuizButtonClicked: (isQuizButtonClicked: boolean) => void;
 }
 
-function ToHomeButton({ isHomeButtonClicked, setIsHomeButtonClicked, isQuizButtonClicked, setIsQuizButtonClicked }: toHomeButtonProps) {
+function ToHomeButton({ isQuizButtonClicked, setIsQuizButtonClicked, isHomeButtonClicked, setIsHomeButtonClicked }: toHomeButtonProps) {
     let navigate = useNavigate();
     const routeChange = () => {
         let path = '/';

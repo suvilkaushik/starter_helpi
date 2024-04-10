@@ -1,12 +1,4 @@
 import { useState } from "react";
-<<<<<<< HEAD
-
-function Basic(){
-
-    return <p>
-        basic
-    </p>
-=======
 import { Button, Form } from "react-bootstrap";
 
 function Basic() {
@@ -147,7 +139,6 @@ function Basic() {
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
     </div>
   );
->>>>>>> cb5f3b4ca458fd056f0e24374efaec27c6f2ac99
 }
 
 export default Basic;

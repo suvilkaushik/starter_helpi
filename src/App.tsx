@@ -26,6 +26,7 @@ function App() {
   const [isHomeButtonClicked, setIsHomeButtonClicked] = useState<boolean>(true);
 
 
+
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -44,20 +45,14 @@ function App() {
         <Route path="/Basic" element={<Basic />} />
         <Route path="/Detailed" element={<Detailed />} />
       </Routes>
-
-<<<<<<< HEAD
-    </Routes>
-      
-    <div className="quizButtonContainer">
       {!isHomeButtonClicked && <ToHomeButton
-          isQuizButtonClicked={isQuizButtonClicked}
-          setIsQuizButtonClicked={setIsQuizButtonClicked}
-          isHomeButtonClicked={isHomeButtonClicked}
-          setIsHomeButtonClicked={setIsHomeButtonClicked}
+      isQuizButtonClicked={isQuizButtonClicked}
+      setIsQuizButtonClicked={setIsQuizButtonClicked}
+      isHomeButtonClicked={isHomeButtonClicked}
+      setIsHomeButtonClicked={setIsHomeButtonClicked}
       ></ToHomeButton>}
-=======
-      <div className="quizButtonContainer">
->>>>>>> cb5f3b4ca458fd056f0e24374efaec27c6f2ac99
+    
+    <div className="quizButtonContainer">
         {!isQuizButtonClicked && (
           <div>
             <h1>Go to Basic Questions</h1>
@@ -72,11 +67,8 @@ function App() {
             <ToBasicButton
               isQuizButtonClicked={isQuizButtonClicked}
               setIsQuizButtonClicked={setIsQuizButtonClicked}
-<<<<<<< HEAD
               isHomeButtonClicked={isHomeButtonClicked}
               setIsHomeButtonClicked={setIsHomeButtonClicked}
-=======
->>>>>>> cb5f3b4ca458fd056f0e24374efaec27c6f2ac99
             ></ToBasicButton>
           </div>
         )}
@@ -94,31 +86,12 @@ function App() {
             <ToDetailedButton
               isQuizButtonClicked={isQuizButtonClicked}
               setIsQuizButtonClicked={setIsQuizButtonClicked}
-<<<<<<< HEAD
               isHomeButtonClicked={isHomeButtonClicked}
               setIsHomeButtonClicked={setIsHomeButtonClicked}
             ></ToDetailedButton>
         </div>)}
       </div>
       
-    <Form>
-      <Form.Label>API Key:</Form.Label>
-      <Form.Control
-        type="password"
-        placeholder="Insert API Key Here"
-        onChange={changeKey}
-      />
-      <br />
-      <Button className="Submit-Button" onClick={handleSubmit}>
-        Submit
-      </Button>
-    </Form>
-  </div>
-=======
-            ></ToDetailedButton>
-        </div>)}
-      </div>
-
       <Form>
         <Form.Label>API Key:</Form.Label>
         <Form.Control
@@ -132,7 +105,6 @@ function App() {
         </Button>
       </Form>
     </div>
->>>>>>> cb5f3b4ca458fd056f0e24374efaec27c6f2ac99
   );
 }
 

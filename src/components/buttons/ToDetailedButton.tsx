@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Routes, useNavigate } from 'react-router-dom';
 
 interface toDetailedButtonProps {
     isHomeButtonClicked: boolean;
@@ -21,6 +22,8 @@ function ToDetailedButton({ isQuizButtonClicked, setIsQuizButtonClicked, isHomeB
         routeChange();
     };
   
+
+
     return (
         <Button 
         variant = "secondary" 
