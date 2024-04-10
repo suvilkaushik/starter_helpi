@@ -7,6 +7,7 @@ import Basic from './components/pages/Basic.tsx';
 import Detailed from './components/pages/Detailed.tsx';
 import ToDetailedButton from './components/buttons/ToDetailedButton.tsx';
 import ToBasicButton from './components/buttons/ToBasicButton.tsx';
+import ToHomeButton from "./components/buttons/ToHomeButton.tsx";
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -22,6 +23,8 @@ if (prevKey !== null) {
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [isQuizButtonClicked, setIsQuizButtonClicked] = useState<boolean>(false);
+  const [isHomeButtonClicked, setIsHomeButtonClicked] = useState<boolean>(true);
+
 
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
@@ -45,8 +48,10 @@ function App() {
     </Routes>
       
       <div>
-      {!isQuizButtonClicked && <ToDetailedButton isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToDetailedButton>}
-      {!isQuizButtonClicked && <ToBasicButton  isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToBasicButton>}
+        {/* !isHomeButtonClicked && */}
+      {!isHomeButtonClicked && <ToHomeButton isHomeButtonClicked={isHomeButtonClicked} setIsHomeButtonClicked={setIsHomeButtonClicked} isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToHomeButton>}
+      {!isQuizButtonClicked && <ToDetailedButton isHomeButtonClicked={isHomeButtonClicked} setIsHomeButtonClicked={setIsHomeButtonClicked} isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToDetailedButton>}
+      {!isQuizButtonClicked && <ToBasicButton  isHomeButtonClicked={isHomeButtonClicked} setIsHomeButtonClicked={setIsHomeButtonClicked} isQuizButtonClicked={isQuizButtonClicked} setIsQuizButtonClicked={setIsQuizButtonClicked} ></ToBasicButton>}
       {/* {isQuizButtonClicked && <toHomeButton></toHomeButton>} */}
       </div>
       

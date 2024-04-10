@@ -17,9 +17,9 @@ function ToBasicButton ({ isHomeButtonClicked, setIsHomeButtonClicked, isQuizBut
   }
 
   function handleQuizButtonClick() {
-      setIsQuizButtonClicked(true);
-      setIsHomeButtonClicked(false);
-      routeChange();
+    setIsQuizButtonClicked(!isQuizButtonClicked);
+    setIsHomeButtonClicked(!isHomeButtonClicked);
+  routeChange();
   };
 
   return (
