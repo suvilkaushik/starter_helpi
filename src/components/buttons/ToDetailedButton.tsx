@@ -1,7 +1,6 @@
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-
 interface toDetailedButtonProps {
     isHomeButtonClicked: boolean;
     setIsHomeButtonClicked: (isHomeButtonClicked: boolean) => void;
@@ -9,7 +8,7 @@ interface toDetailedButtonProps {
     setIsQuizButtonClicked: (isQuizButtonClicked: boolean) => void;
 }
 
-function ToDetailedButton({ isHomeButtonClicked, setIsHomeButtonClicked, isQuizButtonClicked, setIsQuizButtonClicked }: toDetailedButtonProps) {
+function ToDetailedButton({ isQuizButtonClicked, setIsQuizButtonClicked, isHomeButtonClicked, setIsHomeButtonClicked }: toDetailedButtonProps) {
     let navigate = useNavigate();
     const routeChange = () => {
         let path = '/Detailed';
@@ -17,17 +16,20 @@ function ToDetailedButton({ isHomeButtonClicked, setIsHomeButtonClicked, isQuizB
     }
 
     function handleQuizButtonClick() {
-        setIsQuizButtonClicked(!isQuizButtonClicked);
         setIsHomeButtonClicked(!isHomeButtonClicked);
+        setIsQuizButtonClicked(!isQuizButtonClicked);
         routeChange();
     };
   
-
-
     return (
-        <div>
-            <Button variant="secondary" onClick={handleQuizButtonClick}>Detailed Quiz</Button>
-        </div>
+        <Button 
+        variant = "secondary" 
+        onClick = { handleQuizButtonClick }    
+         style={{ 
+            padding: '20px', 
+            fontSize: '20px'
+          }}> Detailed Quiz</Button >
+
     );
 };
 

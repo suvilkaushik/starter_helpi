@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-
 interface toHomeButtonProps {
     isHomeButtonClicked: boolean;
     setIsHomeButtonClicked: (isHomeButtonClicked: boolean) => void;
@@ -18,13 +17,13 @@ function ToHomeButton({ isHomeButtonClicked, setIsHomeButtonClicked, isQuizButto
     }
 
     function handleHomeButtonClick() {
-        setIsQuizButtonClicked(!isQuizButtonClicked);
         setIsHomeButtonClicked(!isHomeButtonClicked);
+        setIsQuizButtonClicked(!isQuizButtonClicked);
         routeChange();
     };
 
     return (
-        <Button variant = "secondary" onClick = { handleHomeButtonClick}>Home</Button >
+        <Button variant = "secondary" onClick = { handleHomeButtonClick } > Home</Button >
 
     );
 };
