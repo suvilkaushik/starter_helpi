@@ -24,9 +24,10 @@ function Basic() {
     setSelectedChoices(newChoices);
   }
 
-  function updateProgress(num: number) {
-    setQuestionProgress(questionProgress + 1);
-  }
+  // function updateProgress(num: number) {
+  //   setQuestionProgress(questionProgress + 1);
+  // }
+  // Suvil commented this out for now, just so it can merge and depoloy properly, It is giving warning messages
 
   const questions = [
     <div>

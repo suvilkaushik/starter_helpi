@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { Routes, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface toDetailedButtonProps {
     isHomeButtonClicked: boolean;

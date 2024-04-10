@@ -1,8 +1,5 @@
-import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import ToDetailedButton from './ToDetailedButton';
-import ToBasicButton from './ToBasicButton';
 
 
 interface toHomeButtonProps {
