@@ -1,8 +1,40 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import "../../App.css";
 
 function Basic() {
-  const numberOfQuestions = 3;
+  const questionData = [
+    {
+      questionName: "Question 1",
+      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    },
+    {
+      questionName: "Question 2",
+      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    },
+    {
+      questionName: "Question 3",
+      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    },
+    {
+      questionName: "Question 4",
+      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    },
+    {
+      questionName: "Question 5",
+      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    },
+    {
+      questionName: "Question 6",
+      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    },
+    {
+      questionName: "Question 7",
+      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    },
+  ];
+
+  const numberOfQuestions = questionData.length;
   const [currentQuestionState, setCurrentQuestion] = useState(0);
   const [questionProgress, setQuestionProgress] = useState(0);
   const [selectedChoices, setSelectedChoices] = useState<(string | null)[]>(
@@ -24,96 +56,26 @@ function Basic() {
     setSelectedChoices(newChoices);
   }
 
-  function updateProgress(num: number) {
-    setQuestionProgress(questionProgress + 1);
-  }
-
-  const questions = [
-    <div>
-      What is your favorite hobby{" "}
-      <div>
-        <Form.Check
-          type="checkbox"
-          name="Choices"
-          onChange={checkboxChange}
-          id="choice-1"
-          label="Choice 1"
-          checked={selectedChoices[currentQuestionState] === "choice-1"}
-        />
-        <Form.Check
-          type="checkbox"
-          name="Choices"
-          onChange={checkboxChange}
-          id="choice-2"
-          label="Choice 2"
-          checked={selectedChoices[currentQuestionState] === "choice-2"}
-        />
-        <Form.Check
-          type="checkbox"
-          name="Choices"
-          onChange={checkboxChange}
-          id="choice-3"
-          label="Choice 3"
-          checked={selectedChoices[currentQuestionState] === "choice-3"}
-        />
+  const questions = questionData.map((questionInfo, questionIndex) => (
+    <div key={questionIndex}>
+      <h1>{questionInfo.questionName}</h1>
+      <div className="custom-checkbox">
+        {questionInfo.choices.map((choice, choiceIndex) => (
+          <Form.Check
+            key={choiceIndex}
+            type="checkbox"
+            name="Choices"
+            onChange={checkboxChange}
+            id={`choice-${choiceIndex}`}
+            label={choice}
+            checked={
+              selectedChoices[currentQuestionState] === `choice-${choiceIndex}`
+            }
+          />
+        ))}
       </div>
-    </div>,
-    <div>
-      Question 2{" "}
-      <Form.Check
-        type="checkbox"
-        name="Choices"
-        onChange={checkboxChange}
-        id="choice-1"
-        label="Choice 1"
-        checked={selectedChoices[currentQuestionState] === "choice-1"}
-      />
-      <Form.Check
-        type="checkbox"
-        name="Choices"
-        onChange={checkboxChange}
-        id="choice-2"
-        label="Choice 2"
-        checked={selectedChoices[currentQuestionState] === "choice-2"}
-      />
-      <Form.Check
-        type="checkbox"
-        name="Choices"
-        onChange={checkboxChange}
-        id="choice-3"
-        label="Choice 3"
-        checked={selectedChoices[currentQuestionState] === "choice-3"}
-      />
-    </div>,
-
-    <div>
-      Question 3{" "}
-      <Form.Check
-        type="checkbox"
-        name="Choices"
-        onChange={checkboxChange}
-        id="choice-1"
-        label="Choice 1"
-        checked={selectedChoices[currentQuestionState] === "choice-1"}
-      />
-      <Form.Check
-        type="checkbox"
-        name="Choices"
-        onChange={checkboxChange}
-        id="choice-2"
-        label="Choice 2"
-        checked={selectedChoices[currentQuestionState] === "choice-2"}
-      />
-      <Form.Check
-        type="checkbox"
-        name="Choices"
-        onChange={checkboxChange}
-        id="choice-3"
-        label="Choice 3"
-        checked={selectedChoices[currentQuestionState] === "choice-3"}
-      />
-    </div>,
-  ];
+    </div>
+  ));
 
   return (
     <div>
