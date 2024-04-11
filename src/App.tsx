@@ -41,11 +41,6 @@ function App() {
 
   return (
     <div className="App">
-    <Routes>
-      <Route path="/Basic" element={<Basic />} />
-      <Route path="/Detailed" element={<Detailed />} />
-
-    </Routes>
       
     <div className="quizButtonContainer">
       {!isHomeButtonClicked && <ToHomeButton
@@ -92,7 +87,11 @@ function App() {
             ></ToDetailedButton>
         </div>)}
       </div>
-      
+      <Routes>
+      <Route path="/Basic" element={<Basic />} />
+      <Route path="/Detailed" element={<Detailed />} />
+
+    </Routes>
     <Form>
       <Form.Label>API Key:</Form.Label>
       <Form.Control
