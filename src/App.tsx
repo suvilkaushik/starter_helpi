@@ -19,7 +19,6 @@ if (prevKey !== null) {
 }
 
 
-
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [isQuizButtonClicked, setIsQuizButtonClicked] = useState<boolean>(false);
