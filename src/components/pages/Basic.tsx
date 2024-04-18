@@ -41,6 +41,11 @@ function Basic() {
   const [selectedChoices, setSelectedChoices] = useState<(string | null)[]>(
     Array(numberOfQuestions).fill(null)
   );
+  const [quizFinished, setQuizFinished] = useState(false);
+
+  function showResults() {
+    setQuizFinished(!quizFinished);
+  }
 
   function checkboxChange(e: React.ChangeEvent<HTMLInputElement>) {
     const newChoices = [...selectedChoices];
@@ -81,25 +86,46 @@ function Basic() {
 
   return (
     <div>
-      {questions[currentQuestionState]}
+      {!quizFinished && questions[currentQuestionState]}
       <br></br>
-      <Button
-        onClick={() => {
-          setCurrentQuestion(currentQuestionState - 1);
-        }}
-        disabled={currentQuestionState === 0}
-      >
-        Previous Question
-      </Button>
-      <Button
-        onClick={() => {
-          setCurrentQuestion(currentQuestionState + 1);
-        }}
-        disabled={currentQuestionState === questions.length - 1}
-      >
-        Next Question
-      </Button>
+      {!quizFinished && (
+        <>
+          <Button
+            onClick={() => {
+              setCurrentQuestion(currentQuestionState - 1);
+            }}
+            disabled={currentQuestionState === 0}
+          >
+            Previous Question
+          </Button>
+          <Button
+            onClick={() => {
+              setCurrentQuestion(currentQuestionState + 1);
+            }}
+            disabled={currentQuestionState === questions.length - 1}
+          >
+            Next Question
+          </Button>
+        </>
+      )}
+      {quizFinished &&
+        questionData.map((question, index) => (
+          <div key={index}>
+            {question.questionName}
+            {": "}
+            {selectedChoices[index] ? selectedChoices[index] : "Not answered"}
+          </div>
+        ))}
+      {/* selectedChoices.map((choice, index) => (
+              <div key={index}>{choice ? choice : "Not answered"}</div>
+            ))} */}
       <br />
+      <div>
+        <Button onClick={showResults}>
+          {!quizFinished ? "Show Results" : "Go Back to Questions"}
+        </Button>
+        <br />
+      </div>
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
       <ProgressBar now={questionProgress} max={numberOfQuestions} />
