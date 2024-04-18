@@ -2,6 +2,7 @@ import { Button, Form } from "react-bootstrap";
 import "../../App.css";
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
+import { ProgressBar } from "react-bootstrap";
 
 function Basic() {
   const questionData = [
@@ -44,15 +45,18 @@ function Basic() {
 
   function checkboxChange(e: React.ChangeEvent<HTMLInputElement>) {
     const newChoices = [...selectedChoices];
+    const selectedLabel = e.target.labels
+      ? e.target.labels[0].textContent
+      : null;
 
-    if (newChoices[currentQuestionState] === e.target.id) {
+    if (newChoices[currentQuestionState] === selectedLabel) {
       newChoices[currentQuestionState] = null;
       setQuestionProgress(questionProgress - 1);
     } else {
       if (newChoices[currentQuestionState] === null) {
         setQuestionProgress(questionProgress + 1);
       }
-      newChoices[currentQuestionState] = e.target.id;
+      newChoices[currentQuestionState] = selectedLabel;
     }
     setSelectedChoices(newChoices);
   }
@@ -80,9 +84,7 @@ function Basic() {
             onChange={checkboxChange}
             id={`choice-${choiceIndex}`}
             label={choice}
-            checked={
-              selectedChoices[currentQuestionState] === `choice-${choiceIndex}`
-            }
+            checked={selectedChoices[currentQuestionState] === choice}
           />
         ))}
       </div>
@@ -120,6 +122,7 @@ function Basic() {
   <div>You have completed this quiz. Submit your answers to get your AI generated results!</div>
       </Modal>
       {questions[currentQuestionState]}
+      <br></br>
       <Button
         onClick={() => {
           setCurrentQuestion(currentQuestionState - 1);
@@ -139,6 +142,7 @@ function Basic() {
       <br />
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
+      <ProgressBar now={questionProgress} max={numberOfQuestions} />
     </div>
   );
 }
