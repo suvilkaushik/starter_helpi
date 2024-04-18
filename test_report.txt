@@ -2,6 +2,57 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
+  console.log
+    Promise {
+      <rejected> OpenAIError: It looks like you're running in a browser-like environment.
+      
+      This is disabled by default, as it risks exposing your secret API credentials to attackers.
+      If you understand the risks and have appropriate mitigations in place,
+      you can set the `dangerouslyAllowBrowser` option to `true`, e.g.,
+      
+      new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
+      
+      https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety
+      
+          at new OpenAI (/home/runner/work/starter_helpi/starter_helpi/node_modules/openai/src/index.ts:125:13)
+          at generateCareer (/home/runner/work/starter_helpi/starter_helpi/src/gpt.tsx:4:20)
+          at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:41:29)
+          at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
+          at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
+          at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+          at beginWork$1 (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:27426:14)
+          at performUnitOfWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26560:12)
+          at workLoopSync (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+          at renderRootSync (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+          at performConcurrentWorkOnRoot (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:25738:74)
+          at flushActQueue (/home/runner/work/starter_helpi/starter_helpi/node_modules/react/cjs/react.development.js:2667:24)
+          at act (/home/runner/work/starter_helpi/starter_helpi/node_modules/react/cjs/react.development.js:2582:11)
+          at /home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/act-compat.js:63:25
+          at renderRoot (/home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/pure.js:159:26)
+          at render (/home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/pure.js:246:10)
+          at Object.<anonymous> (/home/runner/work/starter_helpi/starter_helpi/src/App.test.tsx:6:9)
+          at Promise.then.completed (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:218:40)
+          at processTicksAndRejections (node:internal/process/task_queues:96:5)
+          at _runTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:155:3)
+          at _runTestsForDescribeBlock (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:66:9)
+          at run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/runTest.js:475:34)
+          at TestRunner.runTests (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/index.js:101:12)
+          at TestScheduler.scheduleTests (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/TestScheduler.js:333:13)
+          at runJest (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/runJest.js:404:19)
+          at _run10000 (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:320:7)
+          at runCLI (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:173:3)
+          at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37)
+    }
+
+      at App (src/App.tsx:41:11)
+
   console.error
     Error: Uncaught [Error: useNavigate() may be used only in the context of a <Router> component.]
         at reportException (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
@@ -355,6 +406,58 @@
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  console.log
+    Promise {
+      <rejected> OpenAIError: It looks like you're running in a browser-like environment.
+      
+      This is disabled by default, as it risks exposing your secret API credentials to attackers.
+      If you understand the risks and have appropriate mitigations in place,
+      you can set the `dangerouslyAllowBrowser` option to `true`, e.g.,
+      
+      new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
+      
+      https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety
+      
+          at new OpenAI (/home/runner/work/starter_helpi/starter_helpi/node_modules/openai/src/index.ts:125:13)
+          at generateCareer (/home/runner/work/starter_helpi/starter_helpi/src/gpt.tsx:4:20)
+          at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:41:29)
+          at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
+          at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
+          at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+          at beginWork$1 (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:27426:14)
+          at performUnitOfWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26560:12)
+          at workLoopSync (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+          at renderRootSync (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+          at recoverFromConcurrentError (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:25850:20)
+          at performConcurrentWorkOnRoot (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:25750:22)
+          at flushActQueue (/home/runner/work/starter_helpi/starter_helpi/node_modules/react/cjs/react.development.js:2667:24)
+          at act (/home/runner/work/starter_helpi/starter_helpi/node_modules/react/cjs/react.development.js:2582:11)
+          at /home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/act-compat.js:63:25
+          at renderRoot (/home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/pure.js:159:26)
+          at render (/home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/pure.js:246:10)
+          at Object.<anonymous> (/home/runner/work/starter_helpi/starter_helpi/src/App.test.tsx:6:9)
+          at Promise.then.completed (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:218:40)
+          at processTicksAndRejections (node:internal/process/task_queues:96:5)
+          at _runTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:155:3)
+          at _runTestsForDescribeBlock (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:66:9)
+          at run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/runTest.js:475:34)
+          at TestRunner.runTests (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/index.js:101:12)
+          at TestScheduler.scheduleTests (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/TestScheduler.js:333:13)
+          at runJest (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/runJest.js:404:19)
+          at _run10000 (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:320:7)
+          at runCLI (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:173:3)
+          at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37)
+    }
+
+      at App (src/App.tsx:41:11)
 
   console.error
     Error: Uncaught [Error: useNavigate() may be used only in the context of a <Router> component.]
@@ -846,63 +949,52 @@
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-FAIL src/App.test.tsx
-  ✕ renders learn react link (228 ms)
+node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
 
-  ● renders learn react link
+OpenAIError: It looks like you're running in a browser-like environment.
 
-    useNavigate() may be used only in the context of a <Router> component.
+This is disabled by default, as it risks exposing your secret API credentials to attackers.
+If you understand the risks and have appropriate mitigations in place,
+you can set the `dangerouslyAllowBrowser` option to `true`, e.g.,
 
-      10 |
-      11 | function ToBasicButton ({ isQuizButtonClicked, setIsQuizButtonClicked, isHomeButtonClicked, setIsHomeButtonClicked }: toBasicButtonProps) {
-    > 12 |   let navigate = useNavigate();
-         |                             ^
-      13 |   const routeChange = () => {
-      14 |       let path = '/Basic';
-      15 |       navigate(path);
+new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
 
-      at Object.invariant [as UNSAFE_invariant] (node_modules/@remix-run/router/history.ts:494:11)
-      at useNavigateUnstable (node_modules/react-router/lib/hooks.tsx:188:3)
-      at useNavigate (node_modules/react-router/lib/hooks.tsx:184:46)
-      at ToBasicButton (src/components/buttons/ToBasicButton.tsx:12:29)
-      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
-      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20074:13)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21587:16)
-      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27426:14)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26560:12)
-      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
-      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26434:7)
-      at recoverFromConcurrentError (node_modules/react-dom/cjs/react-dom.development.js:25850:20)
-      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25750:22)
-      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
-      at act (node_modules/react/cjs/react.development.js:2582:11)
-      at node_modules/@testing-library/react/dist/act-compat.js:63:25
-      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
-      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:6:9)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety
 
-------------------------|---------|----------|---------|---------|-------------------
-File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------------|---------|----------|---------|---------|-------------------
-All files               |   11.76 |    27.27 |   11.11 |    11.9 |                   
- src                    |   34.78 |       50 |      20 |   34.78 |                   
-  App.tsx               |   66.66 |       75 |   33.33 |   66.66 | 18,32-38          
-  index.tsx             |       0 |      100 |     100 |       0 | 9-23              
-  reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
- src/components/buttons |    8.33 |      100 |   22.22 |    8.33 |                   
-  ToBasicButton.tsx     |    12.5 |      100 |   33.33 |    12.5 | 13-24             
-  ToDetailedButton.tsx  |    12.5 |      100 |   33.33 |    12.5 | 18-29             
-  ToHomeButton.tsx      |       0 |      100 |       0 |       0 | 18-30             
- src/components/pages   |       0 |        0 |       0 |       0 |                   
-  Basic.tsx             |       0 |        0 |       0 |       0 | 7-96              
-  Detailed.tsx          |       0 |        0 |       0 |       0 | 5-72              
-------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 1 total
-Snapshots:   0 total
-Time:        2.58 s
-Ran all test suites.
+    at new OpenAI (/home/runner/work/starter_helpi/starter_helpi/node_modules/openai/src/index.ts:125:13)
+    at generateCareer (/home/runner/work/starter_helpi/starter_helpi/src/gpt.tsx:4:20)
+    at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:41:29)
+    at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
+    at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
+    at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+    at beginWork$1 (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:27426:14)
+    at performUnitOfWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26560:12)
+    at workLoopSync (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+    at renderRootSync (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+    at performConcurrentWorkOnRoot (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:25738:74)
+    at flushActQueue (/home/runner/work/starter_helpi/starter_helpi/node_modules/react/cjs/react.development.js:2667:24)
+    at act (/home/runner/work/starter_helpi/starter_helpi/node_modules/react/cjs/react.development.js:2582:11)
+    at /home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/act-compat.js:63:25
+    at renderRoot (/home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/pure.js:159:26)
+    at render (/home/runner/work/starter_helpi/starter_helpi/node_modules/@testing-library/react/dist/pure.js:246:10)
+    at Object.<anonymous> (/home/runner/work/starter_helpi/starter_helpi/src/App.test.tsx:6:9)
+    at Promise.then.completed (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:66:9)
+    at run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/runTest.js:475:34)
+    at TestRunner.runTests (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/index.js:101:12)
+    at TestScheduler.scheduleTests (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/runJest.js:404:19)
+    at _run10000 (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:320:7)
+    at runCLI (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:173:3)
+    at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37)
