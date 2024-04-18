@@ -8,6 +8,7 @@ import Detailed from './components/pages/Detailed.tsx';
 import ToDetailedButton from './components/buttons/ToDetailedButton.tsx';
 import ToBasicButton from './components/buttons/ToBasicButton.tsx';
 import ToHomeButton from "./components/buttons/ToHomeButton.tsx";
+import { generateCareer } from "./gpt.tsx";
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -37,7 +38,7 @@ function App() {
     setKey(event.target.value);
   }
 
-
+  console.log(generateCareer(["TEST"],["TEST"]));
   return (
     <div className="App">
       
