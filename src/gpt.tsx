@@ -1,7 +1,7 @@
 export async function generateCareer(questions: string[], answers: string[]) {
     const OpenAI = require('openai');
 
-    const openai = new OpenAI({apiKey: localStorage.getItem("MYKEY")});
+    const openai = new OpenAI({apiKey: localStorage.getItem("MYKEY") });
 
     const qaString = questions.map((question, index) => `${question}: ${answers[index]}`).join('\n');
 
