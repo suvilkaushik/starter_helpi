@@ -38,7 +38,14 @@ function App() {
     setKey(event.target.value);
   }
 
-  console.log(generateCareer(["TEST"],["TEST"]));
+  React.useEffect(() => {
+    async function fetchCareer() {
+      const result = await generateCareer(["TEST"],["TEST"]);
+      console.log(result);
+    }
+  
+    fetchCareer();
+  }, []);
   return (
     <div className="App">
       
