@@ -59,16 +59,16 @@ function Detailed() {
     updatedChoices[currentQuestionState] = event.target.value;
     setSelectedChoices(updatedChoices);
   };
-  const questions = questionData.map((questionInfo, questionIndex) => (
-    <div key={questionIndex}>
-      <h1>{questionInfo.questionName}</h1>
-      <p>{questionInfo.question}</p> {/* Display the question here */}
-      <Form.Control
-        type="text"
-        value={selectedChoices[questionIndex] || ""}
-        onChange={handleInputChange}
-      />
-    </div>
+const questions = questionData.map((questionInfo, questionIndex) => (
+  <div key={questionIndex}>
+    <h1>{questionInfo.questionName}</h1>
+    <h2>{questionInfo.question}</h2> {/* Display the question here */}
+    <Form.Control
+      type="text"
+      value={selectedChoices[questionIndex] || ""}
+      onChange={handleInputChange}
+    />
+  </div>
   ));
   return (
     <div>
