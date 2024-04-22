@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 //import logo from "./logo.svg";
 import "./App.css";
 import { Button, Form } from "react-bootstrap";
@@ -46,6 +46,37 @@ function App() {
   
     fetchCareer();
   }, []);
+  
+    useEffect(() => {
+    const handleBeforeUnload = (event: { preventDefault: () => void; returnValue: string; }) => {
+      event.preventDefault();
+      event.returnValue = '';
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  const history = useHistory();
+
+  useEffect(() => {
+    const handleUnload = () => {
+      // Reset site data
+      localStorage.clear();
+      // Send user back to home page
+      history.push('/');
+    };
+
+    window.addEventListener('unload', handleUnload);
+
+    return () => {
+      window.removeEventListener('unload', handleUnload);
+    };
+  }, [history]);
+
   return (
     <div className="App">
       
