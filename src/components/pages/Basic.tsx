@@ -1,7 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import "../../App.css";
-import React, { useEffect, useState } from 'react';
-import Modal from 'react-modal';
+import React, { useEffect, useState } from "react";
+import Modal from "react-modal";
 import { ProgressBar } from "react-bootstrap";
 
 function Basic() {
@@ -98,7 +98,6 @@ function Basic() {
 
   return (
     <div>
-
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -109,28 +108,28 @@ function Basic() {
         shouldReturnFocusAfterClose={false} // don't return focus after close
         style={{
           content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
-            width: '30%', // adjust width
-            height: '20%', // adjust height
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            marginRight: "-50%",
+            transform: "translate(-50%, -50%)",
+            width: "30%", // adjust width
+            height: "20%", // adjust height
           },
           overlay: {
-            background: 'transparent', // make overlay background transparent
+            background: "transparent", // make overlay background transparent
           },
         }}
-    >
-  <h2>Quiz Complete</h2>
-  <Button onClick={closeModal}>close</Button>
-  <div>You have completed this quiz. Submit your answers to get your AI generated results!</div>
+      >
+        <h2>Quiz Complete</h2>
+        <Button onClick={closeModal}>close</Button>
+        <div>
+          You have completed this quiz. Submit your answers to get your AI
+          generated results!
+        </div>
       </Modal>
-      {questions[currentQuestionState]}
-
       {!quizFinished && questions[currentQuestionState]}
-
       <br></br>
       {!quizFinished && (
         <>
