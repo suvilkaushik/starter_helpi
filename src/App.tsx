@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-//import logo from "./logo.svg";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Button, Form } from "react-bootstrap";
 import { Routes, Route} from "react-router-dom";
@@ -46,6 +45,20 @@ function App() {
   
     fetchCareer();
   }, []);
+  
+    useEffect(() => {
+    const handleBeforeUnload = (event: { preventDefault: () => void; returnValue: string; }) => {
+      event.preventDefault();
+      event.returnValue = '';
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
   return (
     <div className="App">
       
