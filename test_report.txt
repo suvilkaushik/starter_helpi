@@ -726,7 +726,7 @@
         at div
         at div
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:24:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:33)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -769,7 +769,7 @@
         at div
         at div
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:24:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:33)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -810,7 +810,7 @@
     
         at Routes (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/components.tsx:504:3)
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:24:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:33)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -847,7 +847,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (218 ms)
+  ✕ renders learn react link (229 ms)
 
   ● renders learn react link
 
@@ -885,25 +885,25 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-------------------------|---------|----------|---------|---------|-------------------
-File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------------|---------|----------|---------|---------|-------------------
-All files               |    9.48 |    15.78 |     8.1 |    9.56 |                   
- src                    |   21.95 |    42.85 |   11.11 |    22.5 |                   
-  App.tsx               |   56.25 |       75 |      20 |   56.25 | 19,32-38,43-47    
-  gpt.tsx               |       0 |        0 |       0 |       0 | 2-32              
-  index.tsx             |       0 |      100 |     100 |       0 | 9-23              
-  reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
- src/components/buttons |    8.33 |      100 |   22.22 |    8.33 |                   
-  ToBasicButton.tsx     |    12.5 |      100 |   33.33 |    12.5 | 13-24             
-  ToDetailedButton.tsx  |    12.5 |      100 |   33.33 |    12.5 | 18-29             
-  ToHomeButton.tsx      |       0 |      100 |       0 |       0 | 18-30             
- src/components/pages   |       0 |        0 |       0 |       0 |                   
-  Basic.tsx             |       0 |        0 |       0 |       0 | 8-164             
-  Detailed.tsx          |       0 |        0 |       0 |       0 | 6-117             
-------------------------|---------|----------|---------|---------|-------------------
+------------------------|---------|----------|---------|---------|----------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    
+------------------------|---------|----------|---------|---------|----------------------
+All files               |    9.75 |    15.78 |     7.5 |    9.83 |                      
+ src                    |   20.83 |    42.85 |    8.33 |   21.27 |                      
+  App.tsx               |   43.47 |       75 |    12.5 |   43.47 | 18,31-37,42-46,50-58 
+  gpt.tsx               |       0 |        0 |       0 |       0 | 2-32                 
+  index.tsx             |       0 |      100 |     100 |       0 | 9-23                 
+  reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10                 
+ src/components/buttons |    8.33 |      100 |   22.22 |    8.33 |                      
+  ToBasicButton.tsx     |    12.5 |      100 |   33.33 |    12.5 | 13-24                
+  ToDetailedButton.tsx  |    12.5 |      100 |   33.33 |    12.5 | 18-29                
+  ToHomeButton.tsx      |       0 |      100 |       0 |       0 | 18-30                
+ src/components/pages   |       0 |        0 |       0 |       0 |                      
+  Basic.tsx             |       0 |        0 |       0 |       0 | 8-164                
+  Detailed.tsx          |       0 |        0 |       0 |       0 | 6-117                
+------------------------|---------|----------|---------|---------|----------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.679 s
+Time:        2.713 s
 Ran all test suites.
