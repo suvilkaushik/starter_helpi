@@ -162,8 +162,8 @@ function Basic() {
       {quizFinished &&
         questionData.map((question, index) => (
           <div key={index}>
-            {question.questionName}
-            {": "}
+            {question.questionName}: {question.question}
+            <br/>{"Answer: "}
             {selectedChoices[index] ? selectedChoices[index] : "Not answered"}
           </div>
         ))}
