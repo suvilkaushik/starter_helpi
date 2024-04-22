@@ -899,11 +899,11 @@ All files               |    9.48 |    15.78 |     8.1 |    9.56 |
   ToDetailedButton.tsx  |    12.5 |      100 |   33.33 |    12.5 | 18-29             
   ToHomeButton.tsx      |       0 |      100 |       0 |       0 | 18-30             
  src/components/pages   |       0 |        0 |       0 |       0 |                   
-  Basic.tsx             |       0 |        0 |       0 |       0 | 8-156             
+  Basic.tsx             |       0 |        0 |       0 |       0 | 8-164             
   Detailed.tsx          |       0 |        0 |       0 |       0 | 6-109             
 ------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.649 s
+Time:        2.615 s
 Ran all test suites.
