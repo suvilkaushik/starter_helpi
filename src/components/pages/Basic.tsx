@@ -8,7 +8,8 @@ function Basic() {
   const questionData = [
     {
       questionName: "Question 1",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+      question: "What sort of work life speaks to your soul?",
+      choices: ["Competitive and high-pressure", "Independent and self-directed", "Collaborative and team-oriented", "Structured and organized"],
     },
     {
       questionName: "Question 2",
@@ -79,7 +80,8 @@ function Basic() {
 
   const questions = questionData.map((questionInfo, questionIndex) => (
     <div key={questionIndex}>
-      <h1>{questionInfo.questionName}</h1>
+      <h2>{questionInfo.questionName}</h2>
+      <h1>{questionInfo.question}</h1>
       <div className="custom-checkbox">
         {questionInfo.choices.map((choice, choiceIndex) => (
           <Form.Check
