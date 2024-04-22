@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import logo from "./logo.svg";
 import "./App.css";
 import { Button, Form } from "react-bootstrap";
 import { Routes, Route} from "react-router-dom";
@@ -59,23 +58,6 @@ function App() {
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
-
-  const history = useHistory();
-
-  useEffect(() => {
-    const handleUnload = () => {
-      // Reset site data
-      localStorage.clear();
-      // Send user back to home page
-      history.push('/');
-    };
-
-    window.addEventListener('unload', handleUnload);
-
-    return () => {
-      window.removeEventListener('unload', handleUnload);
-    };
-  }, [history]);
 
   return (
     <div className="App">
