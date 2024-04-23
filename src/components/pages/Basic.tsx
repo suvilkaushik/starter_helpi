@@ -3,46 +3,82 @@ import "../../App.css";
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { ProgressBar } from "react-bootstrap";
+// import { generateCareer } from "../../gpt";
 
 function Basic() {
   const questionData = [
     {
       questionName: "Question 1",
       question: "When faced with a problem, I am most excited about:",
-      choices: ["Analyzing data and finding patterns", "Working with my hands to create solutions", "Collaborating with others to brainstorm ideas", "Developing new strategies and plans"],
+      choices: [
+        "Analyzing data and finding patterns",
+        "Working with my hands to create solutions",
+        "Collaborating with others to brainstorm ideas",
+        "Developing new strategies and plans",
+      ],
     },
     {
       questionName: "Question 2",
       question: "What gets you out of bed in the morning?",
-      choices: ["Having a sense of purpose and meaning in my work", "The desire to make a positive impact on the world", "Spending time with loved ones and pursuing hobbies", "The idea of achieving financial security, professional growth, and advancing my career"],
+      choices: [
+        "Having a sense of purpose and meaning in my work",
+        "The desire to make a positive impact on the world",
+        "Spending time with loved ones and pursuing hobbies",
+        "The idea of achieving financial security, professional growth, and advancing my career",
+      ],
     },
     {
       questionName: "Question 3",
       question: "What type of tasks do you enjoy most?",
-      choices: ["Solving complex problems and puzzles", "Creating art or designing visual elements", "Communicating and persuading others", "Organizing and managing projects or events"],
+      choices: [
+        "Solving complex problems and puzzles",
+        "Creating art or designing visual elements",
+        "Communicating and persuading others",
+        "Organizing and managing projects or events",
+      ],
     },
     {
       questionName: "Question 4",
       question: "Which subject do you find most interesting or engaging?",
-      choices: ["Science and technology", "Art and design", "Social sciences and humanities", "Business and management"],
+      choices: [
+        "Science and technology",
+        "Art and design",
+        "Social sciences and humanities",
+        "Business and management",
+      ],
     },
     {
       questionName: "Question 5",
       question: "When working on a team project, you tend to:",
-      choices: ["Focus on your specific role and responsibilities", "Contribute creative ideas and innovative solutions", "Foster good communication and cooperation among team members", "Take a leadership role and coordinate tasks and timelines"],
+      choices: [
+        "Focus on your specific role and responsibilities",
+        "Contribute creative ideas and innovative solutions",
+        "Foster good communication and cooperation among team members",
+        "Take a leadership role and coordinate tasks and timelines",
+      ],
     },
     {
       questionName: "Question 6",
       question: "What motivates you the most in your work?",
-      choices: ["Solving challenging problems and overcoming obstacles", "Expressing creativity and making something unique", "Helping others and making a positive impact on society", "Achieving goals and advancing in your career"],
+      choices: [
+        "Solving challenging problems and overcoming obstacles",
+        "Expressing creativity and making something unique",
+        "Helping others and making a positive impact on society",
+        "Achieving goals and advancing in your career",
+      ],
     },
     {
       questionName: "Question 7",
       question: "Your ideal work-life balance would involve:",
-      choices: ["Immersing yourself fully in your work, even outside regular hours", "Having flexibility to pursue personal interests alongside work", "Ensuring time for socializing and spending time with loved ones", "Striving for a balanced schedule with dedicated time for work and relaxation"],
+      choices: [
+        "Immersing yourself fully in your work, even outside regular hours",
+        "Having flexibility to pursue personal interests alongside work",
+        "Ensuring time for socializing and spending time with loved ones",
+        "Striving for a balanced schedule with dedicated time for work and relaxation",
+      ],
     },
   ];
-  
+
   const numberOfQuestions = questionData.length;
   const [currentQuestionState, setCurrentQuestion] = useState(0);
   const [questionProgress, setQuestionProgress] = useState(0);
@@ -163,7 +199,8 @@ function Basic() {
         questionData.map((question, index) => (
           <div key={index}>
             {question.questionName}: {question.question}
-            <br/>{"Answer: "}
+            <br />
+            {"Answer: "}
             {selectedChoices[index] ? selectedChoices[index] : "Not answered"}
           </div>
         ))}
@@ -175,11 +212,13 @@ function Basic() {
         <Button onClick={showResults}>
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
-        <br />
       </div>
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
-      <ProgressBar now={questionProgress} max={numberOfQuestions} />
+      <div className="progressBar">
+        {" "}
+        <ProgressBar now={questionProgress} max={numberOfQuestions} />
+      </div>
     </div>
   );
 }
