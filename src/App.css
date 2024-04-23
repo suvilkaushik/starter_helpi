@@ -35,7 +35,7 @@
 }
 
 .quizButtonContainer div p {
-  margin:20px;
+  margin: 20px;
 }
 
 @keyframes App-logo-spin {
@@ -52,4 +52,8 @@
   flex-direction: column;
   align-items: center;
   margin-right: 10px;
+}
+.progressBar {
+  width: 50%;
+  margin: 0 auto;
 }
