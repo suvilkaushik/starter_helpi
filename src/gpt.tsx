@@ -23,7 +23,7 @@ export async function generateCareer(questions: string[], answers: string[]) {
         messages: [     
         { role: 'system', content: 'You are a career counselor' },
         { role: 'user', content: "These are the questions and answers that a user has inputted for a quiz designed to recommend a career path:\n" + qaString 
-            + "\nBased on this information, what career path would you recommend, return a json?"}
+            + "\nBased on this information, what career path would you recommend, return a JSON with the following template {\"career\": [name of career field], \"potential_job_title\": [potential job title], \"reasoning\": [reasoning for recommendation]}\n"}
         ],
     });
     const result = completion.choices[0]
