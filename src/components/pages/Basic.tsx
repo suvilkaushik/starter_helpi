@@ -3,36 +3,80 @@ import "../../App.css";
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { ProgressBar } from "react-bootstrap";
+import { generateCareer } from "../../gpt";
+// import { generateCareer } from "../../gpt";
 
 function Basic() {
   const questionData = [
     {
       questionName: "Question 1",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+      question: "When faced with a problem, I am most excited about:",
+      choices: [
+        "Analyzing data and finding patterns",
+        "Working with my hands to create solutions",
+        "Collaborating with others to brainstorm ideas",
+        "Developing new strategies and plans",
+      ],
     },
     {
       questionName: "Question 2",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+      question: "What gets you out of bed in the morning?",
+      choices: [
+        "Having a sense of purpose and meaning in my work",
+        "The desire to make a positive impact on the world",
+        "Spending time with loved ones and pursuing hobbies",
+        "The idea of achieving financial security, professional growth, and advancing my career",
+      ],
     },
     {
       questionName: "Question 3",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+      question: "What type of tasks do you enjoy most?",
+      choices: [
+        "Solving complex problems and puzzles",
+        "Creating art or designing visual elements",
+        "Communicating and persuading others",
+        "Organizing and managing projects or events",
+      ],
     },
     {
       questionName: "Question 4",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+      question: "Which subject do you find most interesting or engaging?",
+      choices: [
+        "Science and technology",
+        "Art and design",
+        "Social sciences and humanities",
+        "Business and management",
+      ],
     },
     {
       questionName: "Question 5",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+      question: "When working on a team project, you tend to:",
+      choices: [
+        "Focus on your specific role and responsibilities",
+        "Contribute creative ideas and innovative solutions",
+        "Foster good communication and cooperation among team members",
+        "Take a leadership role and coordinate tasks and timelines",
+      ],
     },
     {
       questionName: "Question 6",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+      question: "What motivates you the most in your work?",
+      choices: [
+        "Solving challenging problems and overcoming obstacles",
+        "Expressing creativity and making something unique",
+        "Helping others and making a positive impact on society",
+        "Achieving goals and advancing in your career",
+      ],
     },
     {
       questionName: "Question 7",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+      question: "Your ideal work-life balance would involve:",
+      choices: [
+        "Immersing yourself fully in your work, even outside regular hours",
+        "Having flexibility to pursue personal interests alongside work",
+        "Ensuring time for socializing and spending time with loved ones",
+        "Striving for a balanced schedule with dedicated time for work and relaxation",
+      ],
     },
   ];
 
@@ -43,6 +87,15 @@ function Basic() {
     Array(numberOfQuestions).fill(null)
   );
   const [quizFinished, setQuizFinished] = useState(false);
+  const [returnValue, setReturnValue] = useState("");
+
+  async function onSubmission() {
+    const result = generateCareer(
+      questionData.map((question) => question.question),
+      selectedChoices.filter((choice) => choice !== null) as string[]
+    );
+    setReturnValue(await result);
+  }
 
   function showResults() {
     setQuizFinished(!quizFinished);
@@ -79,7 +132,8 @@ function Basic() {
 
   const questions = questionData.map((questionInfo, questionIndex) => (
     <div key={questionIndex}>
-      <h1>{questionInfo.questionName}</h1>
+      <h2>{questionInfo.questionName}</h2>
+      <h1>{questionInfo.question}</h1>
       <div className="custom-checkbox">
         {questionInfo.choices.map((choice, choiceIndex) => (
           <Form.Check
@@ -154,8 +208,9 @@ function Basic() {
       {quizFinished &&
         questionData.map((question, index) => (
           <div key={index}>
-            {question.questionName}
-            {": "}
+            {question.questionName}: {question.question}
+            <br />
+            {"Answer: "}
             {selectedChoices[index] ? selectedChoices[index] : "Not answered"}
           </div>
         ))}
@@ -167,11 +222,15 @@ function Basic() {
         <Button onClick={showResults}>
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
-        <br />
+        <Button onClick={onSubmission}>Submit</Button>
+        <p>{returnValue}</p>
       </div>
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
-      <ProgressBar now={questionProgress} max={numberOfQuestions} />
+      <div className="progressBar">
+        {" "}
+        <ProgressBar now={questionProgress} max={numberOfQuestions} />
+      </div>
     </div>
   );
 }

@@ -1,21 +1,25 @@
-export async function generateCareer(questions: string[], answers: string[]) {
-    const OpenAI = require('openai');
+export async function generateCareer(
+  questions: string[],
+  answers: string[]
+): Promise<string> {
+  const OpenAI = require("openai");
 
-    let keyData = "";
-    const saveKeyData = "MYKEY";
-    const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
-    if (prevKey !== null) {
+  let keyData = "";
+  const saveKeyData = "MYKEY";
+  const prevKey = localStorage.getItem(saveKeyData);
+  if (prevKey !== null) {
     keyData = JSON.parse(prevKey);
-    }
-    const openai = new OpenAI({
-        apiKey: keyData,
-        dangerouslyAllowBrowser: true,
-        organization: 'org-JQxy7z2AjS0qio5K1VNWXoH7',
-        project: 'proj_LAKcKEyKlhHJRGVFnqDmX2SV',
-      });
-    // const openai = new OpenAI({apiKey: localStorage.getItem("MYKEY"),dangerouslyAllowBrowser: true});
-    console.log(localStorage.getItem("MYKEY"))
-    const qaString = questions.map((question, index) => `${question}: ${answers[index]}`).join('\n');
+  }
+  const openai = new OpenAI({
+    apiKey: keyData,
+    dangerouslyAllowBrowser: true,
+    organization: "org-JQxy7z2AjS0qio5K1VNWXoH7",
+    project: "proj_LAKcKEyKlhHJRGVFnqDmX2SV",
+  });
+
+  const qaString = questions
+    .map((question, index) => `${question}: ${answers[index]}`)
+    .join("\n");
 
     const completion = await openai.chat.completions.create({
         response_format: { "type": "json_object" },
@@ -30,4 +34,10 @@ export async function generateCareer(questions: string[], answers: string[]) {
     
     const { content } = result.message;
     console.log(content);
+}
+  
+  const { content } = result.message;
+  const contentString = JSON.stringify(content); // Convert content to a string
+
+  return contentString;
 }
