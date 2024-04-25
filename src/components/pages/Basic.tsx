@@ -3,6 +3,7 @@ import "../../App.css";
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { ProgressBar } from "react-bootstrap";
+import { generateCareer } from "../../gpt";
 // import { generateCareer } from "../../gpt";
 
 function Basic() {
@@ -86,6 +87,15 @@ function Basic() {
     Array(numberOfQuestions).fill(null)
   );
   const [quizFinished, setQuizFinished] = useState(false);
+  const [returnValue, setReturnValue] = useState("");
+
+  async function onSubmission() {
+    const result = generateCareer(
+      questionData.map((question) => question.question),
+      selectedChoices.filter((choice) => choice !== null) as string[]
+    );
+    setReturnValue(await result);
+  }
 
   function showResults() {
     setQuizFinished(!quizFinished);
@@ -212,6 +222,8 @@ function Basic() {
         <Button onClick={showResults}>
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
+        <Button onClick={onSubmission}>Submit</Button>
+        <p>{returnValue}</p>
       </div>
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
