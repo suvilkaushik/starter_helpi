@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     navigate("/starter_helpi");
-  }, []);
+  }, [navigate]);
 
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
