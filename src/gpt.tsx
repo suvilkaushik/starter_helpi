@@ -34,10 +34,7 @@ export async function generateCareer(
     
     const { content } = result.message;
     console.log(content);
-}
-  
-  const { content } = result.message;
-  const contentString = JSON.stringify(content); // Convert content to a string
+    const contentString = JSON.stringify(content); // Convert content to a string
 
   return contentString;
 }
