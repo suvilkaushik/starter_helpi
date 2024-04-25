@@ -21,22 +21,21 @@ export async function generateCareer(
     .map((question, index) => `${question}: ${answers[index]}`)
     .join("\n");
 
-  const completion = await openai.chat.completions.create({
-    response_format: { type: "json_object" },
-    model: "gpt-3.5-turbo",
-    messages: [
-      { role: "system", content: "You are a career counselor" },
-      {
-        role: "user",
-        content:
-          "These are the questions and answers that a user has inputted for a quiz designed to recommend a career path:\n" +
-          qaString +
-          "\nBased on this information, what career path would you recommend, return a json?",
-      },
-    ],
-  });
-
-  const result = completion.choices[0];
+    const completion = await openai.chat.completions.create({
+        response_format: { "type": "json_object" },
+        model: "gpt-3.5-turbo",
+        messages: [     
+        { role: 'system', content: 'You are a career counselor' },
+        { role: 'user', content: "These are the questions and answers that a user has inputted for a quiz designed to recommend a career path:\n" + qaString 
+            + "\nBased on this information, what career path would you recommend, return a JSON with the following template {\"career\": [name of career field], \"potential_job_title\": [potential job title], \"reasoning\": [reasoning for recommendation]}\n"}
+        ],
+    });
+    const result = completion.choices[0]
+    
+    const { content } = result.message;
+    console.log(content);
+}
+  
   const { content } = result.message;
   const contentString = JSON.stringify(content); // Convert content to a string
 
