@@ -25,7 +25,7 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/");
+    navigate("/starter_helpi");
   }, []);
 
   //sets the local storage item to the api key the user inputed

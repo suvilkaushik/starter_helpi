@@ -17,7 +17,7 @@ function ToHomeButton({
 }: toHomeButtonProps) {
   let navigate = useNavigate();
   const routeChange = () => {
-    let path = "/";
+    let path = "/starter_helpi";
     navigate(path);
   };
 
