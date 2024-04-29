@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Button, Form } from "react-bootstrap";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Basic from "./components/pages/Basic.tsx";
 import Detailed from "./components/pages/Detailed.tsx";
 import ToDetailedButton from "./components/buttons/ToDetailedButton.tsx";
