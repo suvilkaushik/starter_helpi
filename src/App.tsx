@@ -22,11 +22,6 @@ function App() {
   const [isQuizButtonClicked, setIsQuizButtonClicked] =
     useState<boolean>(false);
   const [isHomeButtonClicked, setIsHomeButtonClicked] = useState<boolean>(true);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate("/");
-  }, []);
 
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
