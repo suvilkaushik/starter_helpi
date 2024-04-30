@@ -57,3 +57,12 @@
   width: 50%;
   margin: 0 auto;
 }
+
+.Navbar {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; */
+  background-color: #1351cd;
+  color: white;
+}

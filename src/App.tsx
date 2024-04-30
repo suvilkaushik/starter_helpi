@@ -7,6 +7,8 @@ import Detailed from "./components/pages/Detailed.tsx";
 import ToDetailedButton from "./components/buttons/ToDetailedButton.tsx";
 import ToBasicButton from "./components/buttons/ToBasicButton.tsx";
 import ToHomeButton from "./components/buttons/ToHomeButton.tsx";
+import ToNavBar from "./components/buttons/ToNavBar";
+
 import { generateCareer } from "./gpt.tsx";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -61,6 +63,12 @@ function App() {
 
   return (
     <div className="App">
+      <ToNavBar
+        isQuizButtonClicked={isQuizButtonClicked}
+        setIsQuizButtonClicked={setIsQuizButtonClicked}
+        isHomeButtonClicked={isHomeButtonClicked}
+        setIsHomeButtonClicked={setIsHomeButtonClicked}
+      ></ToNavBar>
       <div className="quizButtonContainer">
         {!isHomeButtonClicked && (
           <ToHomeButton
