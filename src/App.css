@@ -24,6 +24,15 @@
   color: white;
 }
 
+body {
+  background-image: url("./components/images/Forest_landscape.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  height: 100vh;
+}
+
 .App-link {
   color: #61dafb;
 }
