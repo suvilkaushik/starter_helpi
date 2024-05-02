@@ -33,6 +33,10 @@ function ToDetailedButton({
       style={{
         padding: "20px",
         fontSize: "20px",
+        backgroundColor: "#C46967",
+        borderColor: "#514242",
+        borderWidth: "3px",
+        margin: "20px",
       }}
     >
       {" "}

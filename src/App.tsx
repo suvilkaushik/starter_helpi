@@ -79,8 +79,8 @@ function App() {
           ></ToHomeButton>
         )}
         {!isQuizButtonClicked && (
-          <div>
-            <h1>Go to Basic Questions</h1>
+          <div className="quizContainer">
+            <h1 style={{ color: '#8ABAE0' }}>Go to Basic Questions</h1>
             <p>
               Designed to help you explore various career options based on your
               interests, skills, and personality traits. The quiz consists of
@@ -98,8 +98,8 @@ function App() {
           </div>
         )}
         {!isQuizButtonClicked && (
-          <div>
-            <h1>Go to Detailed Questions</h1>
+          <div className="quizContainer">
+            <h1 style={{ color: '#C46967', fontWeight:"bolder" }}>Go to Detailed Questions</h1>
             <p>
               Evaluates your interests, strengths, values, skills, and career
               goals. It includes a combination of multiple-choice, open-ended,

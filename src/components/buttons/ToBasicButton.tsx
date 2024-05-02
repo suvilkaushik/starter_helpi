@@ -27,7 +27,11 @@ function ToBasicButton ({ isQuizButtonClicked, setIsQuizButtonClicked, isHomeBut
     onClick={handleQuizButtonClick} 
     style={{ 
       padding: '20px', 
-      fontSize: '20px'
+      fontSize: '20px',
+      backgroundColor: "#8ABAE0",
+      borderColor: "#514242",
+      borderWidth: "3px",
+      margin: "20px",
     }}
   >
     Basic Quiz
