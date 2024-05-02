@@ -222,7 +222,11 @@ function Basic() {
         <Button onClick={showResults}>
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
-        {quizFinished && <Button onClick={onSubmission}>Submit</Button>}
+        {quizFinished && (
+          <Button onClick={onSubmission} disabled={questionProgress === 0}>
+            Submit
+          </Button>
+        )}
 
         <p>{returnValue}</p>
       </div>
