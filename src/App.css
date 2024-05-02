@@ -2,13 +2,11 @@
 
 .App {
   text-align: center;
-  background-color: #9781BE;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -31,11 +29,13 @@ body {
 }
 
 .quizButtonContainer {
-  display: flex;
+  display: flex;  
   justify-content: center;
   font: 20px "Papyrus", sans-serif;
   color: #000000;
   font-weight: bold;
+  margin-top: 25vh;
+  
 }
 
 .quizButtonContainer div p {
@@ -43,7 +43,7 @@ body {
 }
 
 .quizContainer{
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.7);
   margin: 1%;
   border-radius: 20px;
 }
@@ -68,4 +68,10 @@ body {
   padding: 10px 20px; */
   background-color: #7f58c2;
   color: white;
+}
+
+.api_input{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
