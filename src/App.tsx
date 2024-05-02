@@ -113,7 +113,7 @@ function App() {
         <Route path="/Basic" element={<Basic />} />
         <Route path="/Detailed" element={<Detailed />} />
       </Routes>
-      <Form>
+      <Form className="api_input">
         <Form.Label>API Key:</Form.Label>
         <Form.Control
           type="password"
