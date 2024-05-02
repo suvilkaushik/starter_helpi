@@ -4,11 +4,11 @@ import { Button, Form } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import Basic from "./components/pages/Basic.tsx";
 import Detailed from "./components/pages/Detailed.tsx";
+import Results from "./components/pages/Results.tsx";
 import ToDetailedButton from "./components/buttons/ToDetailedButton.tsx";
 import ToBasicButton from "./components/buttons/ToBasicButton.tsx";
 import ToHomeButton from "./components/buttons/ToHomeButton.tsx";
 import ToNavBar from "./components/buttons/ToNavBar";
-
 import { generateCareer } from "./gpt.tsx";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -20,6 +20,7 @@ if (prevKey !== null) {
 }
 
 function App() {
+  const [returnValue, setReturnValue] = useState("");
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [isQuizButtonClicked, setIsQuizButtonClicked] =
     useState<boolean>(false);
@@ -118,8 +119,22 @@ function App() {
         )}
       </div>
       <Routes>
-        <Route path="/Basic" element={<Basic />} />
+        <Route
+          path="/Basic"
+          element={
+            <Basic returnValue={returnValue} setReturnValue={setReturnValue} />
+          }
+        />
         <Route path="/Detailed" element={<Detailed />} />
+        <Route
+          path="/Results"
+          element={
+            <Results
+              returnValue={returnValue}
+              setReturnValue={setReturnValue}
+            />
+          }
+        />
       </Routes>
       <Form>
         <Form.Label>API Key:</Form.Label>

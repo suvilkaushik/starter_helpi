@@ -4,9 +4,16 @@ import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { ProgressBar } from "react-bootstrap";
 import { generateCareer } from "../../gpt";
+import { useNavigate } from "react-router-dom";
 // import { generateCareer } from "../../gpt";
 
-function Basic() {
+function Basic({
+  returnValue,
+  setReturnValue,
+}: {
+  returnValue: string;
+  setReturnValue: React.Dispatch<React.SetStateAction<string>>;
+}) {
   const questionData = [
     {
       questionName: "Question 1",
@@ -87,14 +94,17 @@ function Basic() {
     Array(numberOfQuestions).fill(null)
   );
   const [quizFinished, setQuizFinished] = useState(false);
-  const [returnValue, setReturnValue] = useState("");
+  // const [returnValue, setReturnValue] = useState("");
 
+  let navigate = useNavigate();
   async function onSubmission() {
     const result = generateCareer(
       questionData.map((question) => question.question),
       selectedChoices.filter((choice) => choice !== null) as string[]
     );
     setReturnValue(await result);
+    let path = "/Results";
+    navigate(path);
   }
 
   function showResults() {
@@ -228,7 +238,7 @@ function Basic() {
           </Button>
         )}
 
-        <p>{returnValue}</p>
+        {/* <p>{returnValue}</p> */}
       </div>
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
