@@ -163,7 +163,7 @@ function Basic({
   ));
 
   return (
-    <div>
+    <div className="questionContainer">
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
