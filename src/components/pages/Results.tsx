@@ -22,8 +22,8 @@ function Results({
       {" "}
       {careerData && (
         <>
-          <h2>{careerData.career}</h2>
-          <p>{careerData.potential_job_title}</p>
+          <h2>{careerData.Field}</h2>
+          <p>{careerData.potential_job_titles}</p>
           <p>{careerData.reasoning}</p>
         </>
       )}
