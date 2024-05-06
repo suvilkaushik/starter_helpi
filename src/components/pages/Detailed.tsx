@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Form, ProgressBar } from "react-bootstrap";
+import { Button, Form, ProgressBar, Spinner } from "react-bootstrap";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
 import { generateCareer } from "../../gpt";
@@ -55,8 +55,11 @@ function Detailed({
     Array(numberOfQuestions).fill(null)
   );
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [isLoadingAnswer, setIsLoadingAnswer] = useState(false);
+
   let navigate = useNavigate();
   async function onSubmission() {
+    setIsLoadingAnswer(true);
     const result = generateCareer(
       questionData.map((question) => question.question),
       selectedChoices.filter((choice) => choice !== null) as string[]
@@ -171,7 +174,17 @@ function Detailed({
         </Button>
         {quizFinished && (
           <Button onClick={onSubmission} disabled={questionProgress === 0}>
-            Submit
+            {!isLoadingAnswer ? (
+              "Submit"
+            ) : (
+              <Spinner
+                as="span"
+                animation="border"
+                size="sm"
+                // role="status"
+                // aria-hidden="true"
+              />
+            )}
           </Button>
         )}
 
