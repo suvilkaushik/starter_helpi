@@ -145,7 +145,11 @@ function App() {
           onChange={changeKey}
         />
         <br />
-        <Button className="Submit-Button" onClick={handleSubmit}>
+        <Button
+          className="Submit-Button"
+          onClick={handleSubmit}
+          variant="success"
+        >
           Submit
         </Button>
       </Form>
