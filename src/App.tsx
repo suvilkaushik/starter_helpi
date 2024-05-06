@@ -7,7 +7,6 @@ import Detailed from "./components/pages/Detailed.tsx";
 import Results from "./components/pages/Results.tsx";
 import ToDetailedButton from "./components/buttons/ToDetailedButton.tsx";
 import ToBasicButton from "./components/buttons/ToBasicButton.tsx";
-import ToHomeButton from "./components/buttons/ToHomeButton.tsx";
 import ToNavBar from "./components/buttons/ToNavBar";
 import { generateCareer } from "./gpt.tsx";
 
