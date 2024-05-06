@@ -1,4 +1,4 @@
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Spinner } from "react-bootstrap";
 import "../../App.css";
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
@@ -94,10 +94,12 @@ function Basic({
     Array(numberOfQuestions).fill(null)
   );
   const [quizFinished, setQuizFinished] = useState(false);
+  const [isLoadingAnswer, setIsLoadingAnswer] = useState(false);
   // const [returnValue, setReturnValue] = useState("");
 
   let navigate = useNavigate();
   async function onSubmission() {
+    setIsLoadingAnswer(true);
     const result = generateCareer(
       questionData.map((question) => question.question),
       selectedChoices.filter((choice) => choice !== null) as string[]
@@ -161,7 +163,7 @@ function Basic({
   ));
 
   return (
-    <div className="questionContainer">
+    <div>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -225,30 +227,38 @@ function Basic({
           </div>
         ))}
       {/* selectedChoices.map((choice, index) => (
-              <div key={index}>{choice ? choice : "Not answered"}</div>
-            ))} */}
+        <div key={index}>{choice ? choice : "Not answered"}</div>
+      )) */}
       <br />
       <div>
         <Button onClick={showResults}>
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
         {quizFinished && (
-          <Button onClick={onSubmission} disabled={questionProgress === 0}>
-            Submit
-          </Button>
+          <>
+            <Button onClick={onSubmission} disabled={questionProgress === 0}>
+              {!isLoadingAnswer ? (
+                "Submit"
+              ) : (
+                <Spinner
+                  as="span"
+                  animation="border"
+                  size="sm"
+                  // role="status"
+                  // aria-hidden="true"
+                />
+              )}
+            </Button>
+            {/* <p> {isLoadingAnswer && <Spinner animation="border" />} </p> */}
+          </>
         )}
-
         {/* <p>{returnValue}</p> */}
       </div>
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
       <div className="progressBar">
         {" "}
-        <ProgressBar
-          now={questionProgress}
-          max={numberOfQuestions}
-          variant="success"
-        />
+        <ProgressBar now={questionProgress} max={numberOfQuestions} />
       </div>
     </div>
   );
