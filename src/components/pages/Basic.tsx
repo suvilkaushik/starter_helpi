@@ -260,7 +260,6 @@ function Basic({
         )}
         {/* <p>{returnValue}</p> */}
       </div>
-      On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
       <div className="progressBar">
         {" "}

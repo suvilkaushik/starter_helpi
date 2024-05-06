@@ -1,3 +1,5 @@
+import { resourceUsage } from "process";
+
 export async function generateCareer(
   questions: string[],
   answers: string[]
@@ -23,7 +25,7 @@ export async function generateCareer(
 
     const completion = await openai.chat.completions.create({
         response_format: { "type": "json_object" },
-        model: "gpt-3.5-turbo",
+        model: "gpt-4-1106-preview",
         messages: [     
         { role: 'system', content: 'You are a career counselor' },
         { role: 'user', content: "These are the questions and answers that a user has inputted for a quiz designed to recommend a career path:\n" + qaString 
@@ -31,7 +33,7 @@ export async function generateCareer(
         ],
     });
     const result = completion.choices[0]
-    
+    console.log(result)
     const { content } = result.message;
     console.log(content);
     const contentString = JSON.stringify(content); // Convert content to a string
