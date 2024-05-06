@@ -161,7 +161,7 @@ function Basic({
   ));
 
   return (
-    <div>
+    <div className="questionContainer">
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -244,7 +244,11 @@ function Basic({
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
       <div className="progressBar">
         {" "}
-        <ProgressBar now={questionProgress} max={numberOfQuestions} />
+        <ProgressBar
+          now={questionProgress}
+          max={numberOfQuestions}
+          variant="success"
+        />
       </div>
     </div>
   );
