@@ -963,7 +963,7 @@
     
         at ToNavBar (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToNavBar.tsx:18:3)
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:49)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:22:49)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -1006,7 +1006,7 @@
         at div
         at div
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:49)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:22:49)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -1049,7 +1049,7 @@
         at div
         at div
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:49)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:22:49)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -1090,7 +1090,7 @@
     
         at Routes (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/components.tsx:504:3)
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:23:49)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:22:49)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -1127,7 +1127,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (246 ms)
+  ✕ renders learn react link (224 ms)
 
   ● renders learn react link
 
@@ -1168,9 +1168,9 @@ FAIL src/App.test.tsx
 ------------------------|---------|----------|---------|---------|----------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    
 ------------------------|---------|----------|---------|---------|----------------------
-All files               |    9.33 |    14.28 |    7.69 |    9.33 |                      
- src                    |      22 |    42.85 |    8.33 |      22 |                      
-  App.tsx               |   45.83 |       75 |    12.5 |   45.83 | 19,31-37,42-46,50-61 
+All files               |    9.33 |     12.5 |    7.69 |    9.33 |                      
+ src                    |      22 |    41.66 |    8.33 |      22 |                      
+  App.tsx               |   45.83 |    83.33 |    12.5 |   45.83 | 18,30-36,41-45,49-60 
   gpt.tsx               |       0 |        0 |       0 |       0 | 5-39                 
   index.tsx             |       0 |      100 |     100 |       0 | 9-23                 
   reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10                 
@@ -1187,5 +1187,5 @@ All files               |    9.33 |    14.28 |    7.69 |    9.33 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.825 s
+Time:        3.002 s
 Ran all test suites.
