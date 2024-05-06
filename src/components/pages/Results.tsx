@@ -8,7 +8,11 @@ function Results({
   setReturnValue: any;
 }) {
   //   return <></>;
-  return <p>{returnValue}</p>;
+  return (
+    <div className="questionContainer">
+      <p>{returnValue}</p>;
+    </div>
+  );
 }
 
 export default Results;
