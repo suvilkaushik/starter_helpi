@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/starter_helpi/static/css/main.ae7e04af.css",
-    "main.js": "/starter_helpi/static/js/main.a4a73790.js",
+    "main.js": "/starter_helpi/static/js/main.21abd652.js",
     "static/js/453.dda23872.chunk.js": "/starter_helpi/static/js/453.dda23872.chunk.js",
     "static/media/Forest_landscape.png": "/starter_helpi/static/media/Forest_landscape.fc2ab0de2a69d5e1b11c.png",
     "index.html": "/starter_helpi/index.html",
     "main.ae7e04af.css.map": "/starter_helpi/static/css/main.ae7e04af.css.map",
-    "main.a4a73790.js.map": "/starter_helpi/static/js/main.a4a73790.js.map",
+    "main.21abd652.js.map": "/starter_helpi/static/js/main.21abd652.js.map",
     "453.dda23872.chunk.js.map": "/starter_helpi/static/js/453.dda23872.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ae7e04af.css",
-    "static/js/main.a4a73790.js"
+    "static/js/main.21abd652.js"
   ]
 }

@@ -1127,7 +1127,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (224 ms)
+  ✕ renders learn react link (234 ms)
 
   ● renders learn react link
 
@@ -1168,7 +1168,7 @@ FAIL src/App.test.tsx
 ------------------------|---------|----------|---------|---------|----------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    
 ------------------------|---------|----------|---------|---------|----------------------
-All files               |    9.33 |     12.5 |    7.69 |    9.33 |                      
+All files               |    8.75 |     9.61 |    7.01 |    8.75 |                      
  src                    |      22 |    41.66 |    8.33 |      22 |                      
   App.tsx               |   45.83 |    83.33 |    12.5 |   45.83 | 18,30-36,41-45,49-60 
   gpt.tsx               |       0 |        0 |       0 |       0 | 5-39                 
@@ -1181,11 +1181,11 @@ All files               |    9.33 |     12.5 |    7.69 |    9.33 |
   ToNavBar.tsx          |    6.66 |      100 |    12.5 |    6.66 | 24-57                
  src/components/pages   |       0 |        0 |       0 |       0 |                      
   Basic.tsx             |       0 |        0 |       0 |       0 | 17-222               
-  Detailed.tsx          |       0 |        0 |       0 |       0 | 6-124                
+  Detailed.tsx          |       0 |        0 |       0 |       0 | 14-161               
   Results.tsx           |       0 |      100 |       0 |       0 | 11                   
 ------------------------|---------|----------|---------|---------|----------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.002 s
+Time:        3.096 s
 Ran all test suites.
