@@ -1127,7 +1127,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (283 ms)
+  ✕ renders learn react link (231 ms)
 
   ● renders learn react link
 
@@ -1178,14 +1178,14 @@ All files               |    8.38 |     8.92 |    6.89 |    8.38 |
   ToBasicButton.tsx     |    12.5 |      100 |   33.33 |    12.5 | 13-24                
   ToDetailedButton.tsx  |    12.5 |      100 |   33.33 |    12.5 | 18-29                
   ToHomeButton.tsx      |       0 |      100 |       0 |       0 | 18-30                
-  ToNavBar.tsx          |    6.66 |      100 |    12.5 |    6.66 | 24-57                
+  ToNavBar.tsx          |    6.66 |      100 |    12.5 |    6.66 | 24-62                
  src/components/pages   |       0 |        0 |       0 |       0 |                      
-  Basic.tsx             |       0 |        0 |       0 |       0 | 17-222               
-  Detailed.tsx          |       0 |        0 |       0 |       0 | 14-164               
+  Basic.tsx             |       0 |        0 |       0 |       0 | 17-224               
+  Detailed.tsx          |       0 |        0 |       0 |       0 | 14-166               
   Results.tsx           |       0 |        0 |       0 |       0 | 11-20                
 ------------------------|---------|----------|---------|---------|----------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.007 s
+Time:        3.061 s
 Ran all test suites.
