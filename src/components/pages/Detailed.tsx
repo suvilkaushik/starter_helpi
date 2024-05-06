@@ -197,7 +197,6 @@ function Detailed({
         {/* <p>{returnValue}</p> */}
       </div>
       <br />
-      On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
       <ProgressBar
         now={questionProgress}
