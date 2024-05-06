@@ -40,7 +40,7 @@ function ToNavBar({
 
   return (
     <div>
-      <Navbar className="Navbar">
+      <Navbar className="Navbar" data-bs-theme="dark">
         <Container>
           <Navbar.Brand
             onClick={() => handleHomeButtonClick("./starter_helpi")}

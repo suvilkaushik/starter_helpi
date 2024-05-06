@@ -6,31 +6,38 @@ function Detailed() {
   const questionData = [
     {
       questionName: "Question 1",
-      question: "What aspects of your current studies or extracurricular activities excite you the most and why?",
+      question:
+        "What aspects of your current studies or extracurricular activities excite you the most and why?",
     },
     {
       questionName: "Question 2",
-      question: "Can you describe a project or activity you've been involved in that you feel particularly proud of and how it relates to your future career aspirations?",
+      question:
+        "Can you describe a project or activity you've been involved in that you feel particularly proud of and how it relates to your future career aspirations?",
     },
     {
       questionName: "Question 3",
-      question: "What impact do you envision making in your chosen career path, and why is that important to you?",
+      question:
+        "What impact do you envision making in your chosen career path, and why is that important to you?",
     },
     {
       questionName: "Question 4",
-      question: "How do you see yourself contributing to society through your future career, and what motivates you to pursue that path?",
+      question:
+        "How do you see yourself contributing to society through your future career, and what motivates you to pursue that path?",
     },
     {
       questionName: "Question 5",
-      question: "Can you share a person or experience that has influenced your career aspirations and how it impacted your goals?",
+      question:
+        "Can you share a person or experience that has influenced your career aspirations and how it impacted your goals?",
     },
     {
       questionName: "Question 6",
-      question: "What skills or knowledge do you believe are essential for success in your desired career, and how are you developing those skills?",
+      question:
+        "What skills or knowledge do you believe are essential for success in your desired career, and how are you developing those skills?",
     },
     {
       questionName: "Question 7",
-      question: "How do you anticipate your future career evolving or changing over time, and how do you plan to adapt?",
+      question:
+        "How do you anticipate your future career evolving or changing over time, and how do you plan to adapt?",
     },
   ];
   const numberOfQuestions = questionData.length;
@@ -59,16 +66,16 @@ function Detailed() {
     updatedChoices[currentQuestionState] = event.target.value;
     setSelectedChoices(updatedChoices);
   };
-const questions = questionData.map((questionInfo, questionIndex) => (
-  <div key={questionIndex}>
-    <h1>{questionInfo.questionName}</h1>
-    <h2>{questionInfo.question}</h2> {/* Display the question here */}
-    <Form.Control
-      type="text"
-      value={selectedChoices[questionIndex] || ""}
-      onChange={handleInputChange}
-    />
-  </div>
+  const questions = questionData.map((questionInfo, questionIndex) => (
+    <div key={questionIndex}>
+      <h1>{questionInfo.questionName}</h1>
+      <h2>{questionInfo.question}</h2> {/* Display the question here */}
+      <Form.Control
+        type="text"
+        value={selectedChoices[questionIndex] || ""}
+        onChange={handleInputChange}
+      />
+    </div>
   ));
   return (
     <div>
@@ -123,7 +130,11 @@ const questions = questionData.map((questionInfo, questionIndex) => (
       <br />
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
-      <ProgressBar now={questionProgress} max={numberOfQuestions} />
+      <ProgressBar
+        now={questionProgress}
+        max={numberOfQuestions}
+        variant="success"
+      />
     </div>
   );
 }

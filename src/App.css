@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
 
 .App {
   text-align: center;
@@ -25,29 +25,28 @@ body {
   color: #61dafb;
   justify-content: space-between;
   height: 100vh;
-  background-color: #9781BE;
+  background-color: #9781be;
 }
 
 .quizButtonContainer {
-  display: flex;  
+  display: flex;
   justify-content: center;
   font: 20px "Papyrus", sans-serif;
   color: #000000;
   font-weight: bold;
   margin-top: 1vh;
-  
 }
 
 .quizButtonContainer div p {
   margin: 20px;
 }
 
-.quizContainer{
+.quizContainer {
   background-color: rgba(255, 255, 255, 0.7);
   margin: 1%;
   border-radius: 20px;
 }
-.quizContainer h1{
+.quizContainer h1 {
   margin: 20px;
 }
 .custom-checkbox {
@@ -59,18 +58,25 @@ body {
 .progressBar {
   width: 50%;
   margin: 0 auto;
+  color: rgb(106, 147, 128);
 }
 
 .Navbar {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px; */
-  background-color: #7f58c2;
-  color: white;
+  background-color: rgba(33, 60, 62, 0.5);
 }
 
-.api_input{
+.questionContainer {
+  background-color: rgba(33, 60, 62, 0.5);
+  margin: 5%;
+  width: 75%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.api_input {
   position: absolute;
   bottom: 0;
   width: 100%;
