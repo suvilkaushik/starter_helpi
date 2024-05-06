@@ -1,5 +1,3 @@
-import { resourceUsage } from "process";
-
 export async function generateCareer(
   questions: string[],
   answers: string[]
