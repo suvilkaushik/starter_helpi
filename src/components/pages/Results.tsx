@@ -10,7 +10,7 @@ function Results({
   //   return <></>;
   return (
     <div className="questionContainer">
-      <p>{returnValue}</p>;
+      <p>{returnValue}</p>
     </div>
   );
 }
