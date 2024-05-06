@@ -42,12 +42,12 @@ function ToNavBar({
     <div>
       <Navbar className="Navbar" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand
+          <Navbar.Brand style={{fontSize:"35px", fontWeight:"bold"}}
             onClick={() => handleHomeButtonClick("./starter_helpi")}
           >
-            Example Site
+            Job Journey
           </Navbar.Brand>
-          <Nav className="me-auto">
+          <Nav className="me-auto"> 
             <Nav.Link onClick={() => handleHomeButtonClick("/starter_helpi")}>
               Home
             </Nav.Link>

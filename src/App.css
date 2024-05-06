@@ -38,13 +38,14 @@ body {
 }
 
 .quizButtonContainer div p {
-  margin: 20px;
+  margin: 30px;
 }
 
 .quizContainer {
   background-color: rgba(255, 255, 255, 0.7);
   margin: 1%;
   border-radius: 20px;
+  margin-top: 20vh;
 }
 .quizContainer h1 {
   margin: 20px;
@@ -63,6 +64,7 @@ body {
 
 .Navbar {
   background-color: rgba(33, 60, 62, 0.5);
+  margin-left: -20%;
 }
 
 .questionContainer {
@@ -80,4 +82,8 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.me-auto {
+  font-size: large;
 }
