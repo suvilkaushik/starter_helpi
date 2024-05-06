@@ -204,6 +204,7 @@ function Basic({
               setCurrentQuestion(currentQuestionState - 1);
             }}
             disabled={currentQuestionState === 0}
+            variant="success"
           >
             Previous Question
           </Button>
@@ -212,6 +213,7 @@ function Basic({
               setCurrentQuestion(currentQuestionState + 1);
             }}
             disabled={currentQuestionState === questions.length - 1}
+            variant="success"
           >
             Next Question
           </Button>
@@ -231,12 +233,16 @@ function Basic({
       )) */}
       <br />
       <div>
-        <Button onClick={showResults}>
+        <Button onClick={showResults} variant="success">
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
         {quizFinished && (
           <>
-            <Button onClick={onSubmission} disabled={questionProgress === 0}>
+            <Button
+              onClick={onSubmission}
+              disabled={questionProgress === 0}
+              variant="success"
+            >
               {!isLoadingAnswer ? (
                 "Submit"
               ) : (

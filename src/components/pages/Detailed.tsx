@@ -145,6 +145,7 @@ function Detailed({
               setCurrentQuestion(currentQuestionState - 1);
             }}
             disabled={currentQuestionState === 0}
+            variant="success"
           >
             Previous Question
           </Button>
@@ -153,6 +154,7 @@ function Detailed({
               setCurrentQuestion(currentQuestionState + 1);
             }}
             disabled={currentQuestionState === questions.length - 1}
+            variant="success"
           >
             Next Question
           </Button>
@@ -169,7 +171,7 @@ function Detailed({
             </div>
           ))}
 
-        <Button onClick={showResults}>
+        <Button onClick={showResults} variant="success">
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
         {quizFinished && (
