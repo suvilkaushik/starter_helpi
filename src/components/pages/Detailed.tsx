@@ -175,7 +175,11 @@ function Detailed({
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
         {quizFinished && (
-          <Button onClick={onSubmission} disabled={questionProgress === 0}>
+          <Button
+            onClick={onSubmission}
+            disabled={questionProgress === 0}
+            variant="success"
+          >
             {!isLoadingAnswer ? (
               "Submit"
             ) : (
