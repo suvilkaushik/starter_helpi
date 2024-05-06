@@ -71,17 +71,10 @@ function App() {
         setIsHomeButtonClicked={setIsHomeButtonClicked}
       ></ToNavBar>
       <div className="quizButtonContainer">
-        {!isHomeButtonClicked && (
-          <ToHomeButton
-            isQuizButtonClicked={isQuizButtonClicked}
-            setIsQuizButtonClicked={setIsQuizButtonClicked}
-            isHomeButtonClicked={isHomeButtonClicked}
-            setIsHomeButtonClicked={setIsHomeButtonClicked}
-          ></ToHomeButton>
-        )}
+
         {!isQuizButtonClicked && (
           <div className="quizContainer">
-            <h1 style={{ color: '#8ABAE0' }}>Go to Basic Questions</h1>
+            <h1 style={{ color: 'darkgreen' }}>Go to Basic Questions</h1>
             <p>
               Designed to help you explore various career options based on your
               interests, skills, and personality traits. The quiz consists of

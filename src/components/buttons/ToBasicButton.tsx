@@ -23,12 +23,12 @@ function ToBasicButton ({ isQuizButtonClicked, setIsQuizButtonClicked, isHomeBut
 
   return (
     <Button 
-    variant="secondary" 
+    variant="success" 
     onClick={handleQuizButtonClick} 
     style={{ 
       padding: '20px', 
       fontSize: '20px',
-      backgroundColor: "#8ABAE0",
+      // backgroundColor: "#8ABAE0",
       borderColor: "#514242",
       borderWidth: "3px",
       margin: "20px",
