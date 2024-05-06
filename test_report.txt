@@ -1127,7 +1127,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (213 ms)
+  ✕ renders learn react link (231 ms)
 
   ● renders learn react link
 
@@ -1181,11 +1181,11 @@ All files               |    9.45 |       15 |    7.69 |    9.45 |
   ToNavBar.tsx          |    6.66 |      100 |    12.5 |    6.66 | 24-57                
  src/components/pages   |       0 |        0 |       0 |       0 |                      
   Basic.tsx             |       0 |        0 |       0 |       0 | 17-220               
-  Detailed.tsx          |       0 |        0 |       0 |       0 | 6-117                
+  Detailed.tsx          |       0 |        0 |       0 |       0 | 6-124                
   Results.tsx           |       0 |      100 |       0 |       0 | 11                   
 ------------------------|---------|----------|---------|---------|----------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.648 s
+Time:        2.735 s
 Ran all test suites.
