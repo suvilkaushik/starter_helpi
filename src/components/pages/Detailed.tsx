@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import { Button, Form, ProgressBar } from "react-bootstrap";
 import Modal from "react-modal";
+import { useNavigate } from "react-router-dom";
+import { generateCareer } from "../../gpt";
 
-function Detailed() {
+function Detailed({
+  returnValue,
+  setReturnValue,
+}: {
+  returnValue: string;
+  setReturnValue: React.Dispatch<React.SetStateAction<string>>;
+}) {
   const questionData = [
     {
       questionName: "Question 1",
@@ -47,6 +55,21 @@ function Detailed() {
     Array(numberOfQuestions).fill(null)
   );
   const [modalIsOpen, setIsOpen] = useState(false);
+  let navigate = useNavigate();
+  async function onSubmission() {
+    const result = generateCareer(
+      questionData.map((question) => question.question),
+      selectedChoices.filter((choice) => choice !== null) as string[]
+    );
+    setReturnValue(await result);
+    let path = "/Results";
+    navigate(path);
+  }
+  const [quizFinished, setQuizFinished] = useState(false);
+  function showResults() {
+    setQuizFinished(!quizFinished);
+  }
+
   useEffect(() => {
     if (questionProgress === 7) {
       setIsOpen(true);
@@ -77,8 +100,9 @@ function Detailed() {
       />
     </div>
   ));
+
   return (
-    <div>
+    <div className="questionContainer">
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -110,23 +134,49 @@ function Detailed() {
           generated results!
         </div>
       </Modal>
-      {questions[currentQuestionState]}
-      <Button
-        onClick={() => {
-          setCurrentQuestion(currentQuestionState - 1);
-        }}
-        disabled={currentQuestionState === 0}
-      >
-        Previous Question
-      </Button>
-      <Button
-        onClick={() => {
-          setCurrentQuestion(currentQuestionState + 1);
-        }}
-        disabled={currentQuestionState === questions.length - 1}
-      >
-        Next Question
-      </Button>
+      {!quizFinished && questions[currentQuestionState]}
+      {!quizFinished && (
+        <>
+          <Button
+            onClick={() => {
+              setCurrentQuestion(currentQuestionState - 1);
+            }}
+            disabled={currentQuestionState === 0}
+          >
+            Previous Question
+          </Button>
+          <Button
+            onClick={() => {
+              setCurrentQuestion(currentQuestionState + 1);
+            }}
+            disabled={currentQuestionState === questions.length - 1}
+          >
+            Next Question
+          </Button>
+        </>
+      )}
+      <div>
+        {quizFinished &&
+          questionData.map((question, index) => (
+            <div key={index}>
+              {question.questionName}: {question.question}
+              <br />
+              {"Answer: "}
+              {selectedChoices[index] ? selectedChoices[index] : "Not answered"}
+            </div>
+          ))}
+
+        <Button onClick={showResults}>
+          {!quizFinished ? "Show Results" : "Go Back to Questions"}
+        </Button>
+        {quizFinished && (
+          <Button onClick={onSubmission} disabled={questionProgress === 0}>
+            Submit
+          </Button>
+        )}
+
+        {/* <p>{returnValue}</p> */}
+      </div>
       <br />
       On Question {currentQuestionState + 1}
       <br /> Questions answered {questionProgress}/{numberOfQuestions}
