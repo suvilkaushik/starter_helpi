@@ -105,6 +105,7 @@ function Basic({
       selectedChoices.filter((choice) => choice !== null) as string[]
     );
     setReturnValue(await result);
+    
     let path = "/Results";
     navigate(path);
   }
