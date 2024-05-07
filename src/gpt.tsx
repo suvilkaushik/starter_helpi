@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export async function generateCareer(
   questions: string[],
   answers: string[]
@@ -39,6 +41,7 @@ export async function generateCareer(
       console.log(content);
       const contentString = JSON.stringify(content); // Convert content to a string
 
+
       return contentString;
     } catch (error) {
       console.error('Error occurred during API call:', error);
@@ -49,4 +52,36 @@ export async function generateCareer(
     }
   }
   return "";
+}
+
+export async function generateImage(prompt: string): Promise<string> {
+  const OpenAI = require("openai");
+
+  let keyData = "";
+  const saveKeyData = "MYKEY";
+  const prevKey = localStorage.getItem(saveKeyData);
+  if (prevKey !== null) {
+    keyData = JSON.parse(prevKey);
+  }
+  const openai = new OpenAI({
+    apiKey: keyData,
+    dangerouslyAllowBrowser: true,
+    organization: "org-JQxy7z2AjS0qio5K1VNWXoH7",
+    project: "proj_LAKcKEyKlhHJRGVFnqDmX2SV",
+  });
+
+  try {
+    const response = await openai.images.generate({
+      model: "dall-e-2",
+      prompt: prompt,
+      n: 1,
+      size: "256x256",
+    });
+
+    const imageUrl = response.data[0].url;
+    return imageUrl;
+  } catch (error) {
+    console.error('Error occurred during API call:', error);
+    throw error;
+  }
 }

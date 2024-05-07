@@ -36,14 +36,6 @@ function App() {
     setKey(event.target.value);
   }
 
-  React.useEffect(() => {
-    async function fetchCareer() {
-      const result = await generateCareer(["TEST"], ["TEST"]);
-      console.log(result);
-    }
-
-    fetchCareer();
-  }, []);
 
   useEffect(() => {
     const handleBeforeUnload = (event: {
