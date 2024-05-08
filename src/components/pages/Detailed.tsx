@@ -160,17 +160,18 @@ function Detailed({
           </Button>
         </>
       )}
+      {quizFinished &&
+        questionData.map((question, index) => (
+          <div key={index}>
+            {question.questionName}: {question.question}
+            <br />
+            {"Answer: "}
+            {selectedChoices[index] ? selectedChoices[index] : "Not answered"}
+          </div>
+        ))}
+      <br></br>
       <div>
-        {quizFinished &&
-          questionData.map((question, index) => (
-            <div key={index}>
-              {question.questionName}: {question.question}
-              <br />
-              {"Answer: "}
-              {selectedChoices[index] ? selectedChoices[index] : "Not answered"}
-            </div>
-          ))}
-
+        {" "}
         <Button onClick={showResults} variant="success">
           {!quizFinished ? "Show Results" : "Go Back to Questions"}
         </Button>
@@ -193,16 +194,22 @@ function Detailed({
             )}
           </Button>
         )}
-
         {/* <p>{returnValue}</p> */}
       </div>
       <br />
-      <br /> Questions answered {questionProgress}/{numberOfQuestions}
-      <ProgressBar
-        now={questionProgress}
-        max={numberOfQuestions}
-        variant="success"
-      />
+      {!quizFinished &&
+        "Questions answered " + questionProgress + "/" + numberOfQuestions}
+      <br />
+      <div className="progressBar">
+        {" "}
+        {!quizFinished && (
+          <ProgressBar
+            now={questionProgress}
+            max={numberOfQuestions}
+            variant="success"
+          />
+        )}
+      </div>
     </div>
   );
 }
