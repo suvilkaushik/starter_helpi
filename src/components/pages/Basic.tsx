@@ -261,14 +261,18 @@ function Basic({
         )}
         {/* <p>{returnValue}</p> */}
       </div>
-      <br /> Questions answered {questionProgress}/{numberOfQuestions}
+      {!quizFinished &&
+        "Questions answered " + questionProgress + "/" + numberOfQuestions}
+      <br />
       <div className="progressBar">
         {" "}
-        <ProgressBar
-          now={questionProgress}
-          max={numberOfQuestions}
-          variant="success"
-        />
+        {!quizFinished && (
+          <ProgressBar
+            now={questionProgress}
+            max={numberOfQuestions}
+            variant="success"
+          />
+        )}
       </div>
     </div>
   );
