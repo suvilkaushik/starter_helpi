@@ -8,7 +8,6 @@ import Results from "./components/pages/Results.tsx";
 import ToDetailedButton from "./components/buttons/ToDetailedButton.tsx";
 import ToBasicButton from "./components/buttons/ToBasicButton.tsx";
 import ToNavBar from "./components/buttons/ToNavBar";
-import { generateCareer } from "./gpt.tsx";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -35,15 +34,6 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-
-  React.useEffect(() => {
-    async function fetchCareer() {
-      const result = await generateCareer(["TEST"], ["TEST"]);
-      console.log(result);
-    }
-
-    fetchCareer();
-  }, []);
 
   useEffect(() => {
     const handleBeforeUnload = (event: {

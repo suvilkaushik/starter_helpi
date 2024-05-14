@@ -105,6 +105,7 @@ function Basic({
       selectedChoices.filter((choice) => choice !== null) as string[]
     );
     setReturnValue(await result);
+    
     let path = "/Results";
     navigate(path);
   }
@@ -260,15 +261,18 @@ function Basic({
         )}
         {/* <p>{returnValue}</p> */}
       </div>
-      On Question {currentQuestionState + 1}
-      <br /> Questions answered {questionProgress}/{numberOfQuestions}
+      {!quizFinished &&
+        "Questions answered " + questionProgress + "/" + numberOfQuestions}
+      <br />
       <div className="progressBar">
         {" "}
-        <ProgressBar
-          now={questionProgress}
-          max={numberOfQuestions}
-          variant="success"
-        />
+        {!quizFinished && (
+          <ProgressBar
+            now={questionProgress}
+            max={numberOfQuestions}
+            variant="success"
+          />
+        )}
       </div>
     </div>
   );
