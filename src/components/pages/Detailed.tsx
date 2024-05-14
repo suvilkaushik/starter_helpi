@@ -25,7 +25,7 @@ function Detailed({
     {
       questionName: "Question 3",
       question:
-        "What impact do you envision making in your chosen career path, and why is that important to you?",
+        "For your planned career, what is the expected salary range that you aim to make?",
     },
     {
       questionName: "Question 4",
