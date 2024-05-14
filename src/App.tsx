@@ -58,6 +58,7 @@ function App() {
         setIsQuizButtonClicked={setIsQuizButtonClicked}
         isHomeButtonClicked={isHomeButtonClicked}
         setIsHomeButtonClicked={setIsHomeButtonClicked}
+        keyData={keyData}
       ></ToNavBar>
       <div className="quizButtonContainer">
         {!isQuizButtonClicked && (

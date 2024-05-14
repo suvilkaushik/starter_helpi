@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -12,6 +13,7 @@ interface toNavBarProps {
   setIsHomeButtonClicked: (isHomeButtonClicked: boolean) => void;
   isQuizButtonClicked: boolean;
   setIsQuizButtonClicked: (isQuizButtonClicked: boolean) => void;
+  keyData: string;
 }
 
 function ToNavBar({
@@ -19,7 +21,9 @@ function ToNavBar({
   setIsQuizButtonClicked,
   isHomeButtonClicked,
   setIsHomeButtonClicked,
+  keyData,
 }: toNavBarProps) {
+  const [isHovered, setIsHovered] = useState(false);
   let navigate = useNavigate();
   const routeChange = (targetPage: string) => {
     let path = targetPage;
@@ -27,15 +31,19 @@ function ToNavBar({
   };
 
   function handleQuizButtonClick(targetPage: string) {
-    setIsHomeButtonClicked(false);
-    setIsQuizButtonClicked(true);
-    routeChange(targetPage);
+    if (keyData !== "") {
+      setIsHomeButtonClicked(false);
+      setIsQuizButtonClicked(true);
+      routeChange(targetPage);
+    }
   }
 
   function handleHomeButtonClick(targetPage: string) {
-    setIsHomeButtonClicked(true);
-    setIsQuizButtonClicked(false);
-    routeChange(targetPage);
+    if (keyData !== "") {
+      setIsHomeButtonClicked(true);
+      setIsQuizButtonClicked(false);
+      routeChange(targetPage);
+    }
   }
 
   return (
@@ -56,11 +64,57 @@ function ToNavBar({
             <Nav.Link onClick={() => handleHomeButtonClick("/starter_helpi")}>
               Home
             </Nav.Link>
-            <Nav.Link onClick={() => handleQuizButtonClick("/Basic")}>
+            <Nav.Link
+              onClick={() => handleQuizButtonClick("/Basic")}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               Basic Questions
+              {isHovered && !keyData && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "auto%",
+                    left: "auto",
+                    // transform: "translateX(-50%)",
+                    backgroundColor: "white",
+                    padding: "5px",
+                    borderRadius: "5px",
+                    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+                    color: "black",
+                    fontSize: "17px",
+                  }}
+                >
+                  Make sure to enter an AI API Key before starting!
+                  {keyData}
+                </div>
+              )}
             </Nav.Link>
-            <Nav.Link onClick={() => handleQuizButtonClick("/Detailed")}>
+            <Nav.Link
+              onClick={() => handleQuizButtonClick("/Detailed")}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               Detailed Questions
+              {isHovered && !keyData && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "auto%",
+                    left: "auto",
+                    // transform: "translateX(-50%)",
+                    backgroundColor: "white",
+                    padding: "5px",
+                    borderRadius: "5px",
+                    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+                    color: "black",
+                    fontSize: "17px",
+                  }}
+                >
+                  Make sure to enter an AI API Key before starting!
+                  {keyData}
+                </div>
+              )}
             </Nav.Link>
           </Nav>
         </Container>
