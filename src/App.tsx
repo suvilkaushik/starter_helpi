@@ -86,6 +86,7 @@ function App() {
               setIsQuizButtonClicked={setIsQuizButtonClicked}
               isHomeButtonClicked={isHomeButtonClicked}
               setIsHomeButtonClicked={setIsHomeButtonClicked}
+              keyData={keyData}
             ></ToBasicButton>
           </div>
         )}
@@ -96,17 +97,17 @@ function App() {
             </h1>
             <p>
               Evaluates your interests, strengths, values, skills, and career
-              goals. It includes a combination of multiple-choice, open-ended,
-              and situational questions to provide a thorough analysis of your
-              suitability for various professions. The quiz also considers
-              factors such as work-life balance, salary expectations, and career
-              growth opportunities.
+              goals. It includes open-ended and situational questions to provide
+              a thorough analysis of your suitability for various professions.
+              The quiz also considers factors such as work-life balance, salary
+              expectations, and career growth opportunities.
             </p>
             <ToDetailedButton
               isQuizButtonClicked={isQuizButtonClicked}
               setIsQuizButtonClicked={setIsQuizButtonClicked}
               isHomeButtonClicked={isHomeButtonClicked}
               setIsHomeButtonClicked={setIsHomeButtonClicked}
+              keyData={keyData}
             ></ToDetailedButton>
           </div>
         )}
