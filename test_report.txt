@@ -44,7 +44,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToNavBar (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToNavBar.tsx:23:29)
+        at ToNavBar (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToNavBar.tsx:27:29)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -162,7 +162,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:12:29)
+        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:21:29)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -280,7 +280,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:17:29)
+        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:21:29)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -517,7 +517,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToNavBar (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToNavBar.tsx:23:29)
+        at ToNavBar (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToNavBar.tsx:27:29)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -638,7 +638,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:12:29)
+        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:21:29)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -759,7 +759,7 @@
         at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
         at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
         at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:17:29)
+        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:21:29)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
         at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
         at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -961,7 +961,7 @@
   console.error
     The above error occurred in the <ToNavBar> component:
     
-        at ToNavBar (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToNavBar.tsx:18:3)
+        at ToNavBar (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToNavBar.tsx:20:3)
         at div
         at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:21:49)
     
@@ -1002,7 +1002,7 @@
   console.error
     The above error occurred in the <ToBasicButton> component:
     
-        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:11:27)
+        at ToBasicButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToBasicButton.tsx:14:3)
         at div
         at div
         at div
@@ -1045,7 +1045,7 @@
   console.error
     The above error occurred in the <ToDetailedButton> component:
     
-        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:12:3)
+        at ToDetailedButton (/home/runner/work/starter_helpi/starter_helpi/src/components/buttons/ToDetailedButton.tsx:14:3)
         at div
         at div
         at div
@@ -1127,24 +1127,24 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (277 ms)
+  ✕ renders learn react link (283 ms)
 
   ● renders learn react link
 
     useNavigate() may be used only in the context of a <Router> component.
 
-      21 |   setIsHomeButtonClicked,
-      22 | }: toNavBarProps) {
-    > 23 |   let navigate = useNavigate();
+      25 | }: toNavBarProps) {
+      26 |   const [isHovered, setIsHovered] = useState(false);
+    > 27 |   let navigate = useNavigate();
          |                             ^
-      24 |   const routeChange = (targetPage: string) => {
-      25 |     let path = targetPage;
-      26 |     navigate(path);
+      28 |   const routeChange = (targetPage: string) => {
+      29 |     let path = targetPage;
+      30 |     navigate(path);
 
       at Object.invariant [as UNSAFE_invariant] (node_modules/@remix-run/router/history.ts:494:11)
       at useNavigateUnstable (node_modules/react-router/lib/hooks.tsx:188:3)
       at useNavigate (node_modules/react-router/lib/hooks.tsx:184:46)
-      at ToNavBar (src/components/buttons/ToNavBar.tsx:23:29)
+      at ToNavBar (src/components/buttons/ToNavBar.tsx:27:29)
       at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
       at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20074:13)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -1168,17 +1168,17 @@ FAIL src/App.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |     6.8 |     6.94 |    6.77 |     6.8 |                   
+All files               |    7.76 |     5.43 |    5.97 |    7.76 |                   
  src                    |    14.7 |    31.25 |    9.09 |    14.7 |                   
   App.tsx               |      50 |    83.33 |   16.66 |      50 | 17,29-35,39-50    
   gpt.tsx               |       0 |        0 |       0 |       0 | 5-88              
   index.tsx             |       0 |      100 |     100 |       0 | 9-23              
   reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
- src/components/buttons |    7.69 |      100 |   17.64 |    7.69 |                   
-  ToBasicButton.tsx     |    12.5 |      100 |   33.33 |    12.5 | 13-24             
-  ToDetailedButton.tsx  |    12.5 |      100 |   33.33 |    12.5 | 18-29             
+ src/components/buttons |   11.11 |        0 |      12 |   11.11 |                   
+  ToBasicButton.tsx     |   16.66 |        0 |      20 |   16.66 | 22-46             
+  ToDetailedButton.tsx  |   16.66 |        0 |      20 |   16.66 | 22-48             
   ToHomeButton.tsx      |       0 |      100 |       0 |       0 | 18-30             
-  ToNavBar.tsx          |    6.66 |      100 |    12.5 |    6.66 | 24-62             
+  ToNavBar.tsx          |    9.09 |        0 |    8.33 |    9.09 | 28-96             
  src/components/pages   |       0 |        0 |       0 |       0 |                   
   Basic.tsx             |       0 |        0 |       0 |       0 | 17-225            
   Detailed.tsx          |       0 |        0 |       0 |       0 | 14-165            
@@ -1187,5 +1187,5 @@ All files               |     6.8 |     6.94 |    6.77 |     6.8 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.016 s
+Time:        3.055 s
 Ran all test suites.
