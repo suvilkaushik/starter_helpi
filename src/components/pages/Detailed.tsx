@@ -54,7 +54,7 @@ function Detailed({
   const [selectedChoices, setSelectedChoices] = useState<(string | null)[]>(
     Array(numberOfQuestions).fill(null)
   );
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [, setIsOpen] = useState(false);
   const [isLoadingAnswer, setIsLoadingAnswer] = useState(false);
 
   let navigate = useNavigate();
@@ -107,7 +107,7 @@ function Detailed({
   return (
     <div className="questionContainer">
       <Modal
-        isOpen={modalIsOpen}
+        isOpen={false} // replace with modalIsOpen to turn on
         onRequestClose={closeModal}
         contentLabel="Quiz Completion Modal"
         shouldCloseOnOverlayClick={true}
