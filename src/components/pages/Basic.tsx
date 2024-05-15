@@ -105,7 +105,7 @@ function Basic({
       selectedChoices.filter((choice) => choice !== null) as string[]
     );
     setReturnValue(await result);
-    
+
     let path = "/Results";
     navigate(path);
   }
@@ -131,7 +131,7 @@ function Basic({
     }
     setSelectedChoices(newChoices);
   }
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (questionProgress === 7) {
@@ -166,7 +166,7 @@ function Basic({
   return (
     <div className="questionContainer">
       <Modal
-        isOpen={modalIsOpen}
+        isOpen={false} // replace with modalIsOpen to turn on
         onRequestClose={closeModal}
         contentLabel="Quiz Completion Modal"
         shouldCloseOnOverlayClick={true}
