@@ -21,12 +21,16 @@ function Results({
 
   useEffect(() => {
     const fetchImage = async () => {
-      const url = await generateImage("Generate me an image of a software engineer career path");
-      setImageUrl(url);
+      console.log(careerData);
+      if (careerData) {
+        
+        const url = await generateImage(careerData.Field);
+        setImageUrl(url);
+      }
     };
 
     fetchImage();
-  }, []);
+  }, [careerData]);
 
   return (
     <div className="questionContainer">

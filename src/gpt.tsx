@@ -76,9 +76,9 @@ export async function generateImage(prompt: string): Promise<string> {
   try {
     const response = await openai.images.generate({
       model: "dall-e-2",
-      prompt: prompt,
+      prompt: "A image of a career in " + prompt,
       n: 1,
-      size: "256x256",
+      size: "512x512",
     });
 
     const imageUrl = response.data[0].url;
