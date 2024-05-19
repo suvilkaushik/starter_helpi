@@ -7,7 +7,8 @@ function Results({
 }: {
   returnValue: any;
   setReturnValue: any;
-}) {
+}) { 
+  // AI Generated Code: Takes a JSON string and parses it into an array to display the career data and image
   let jsonData = JSON.parse(returnValue);
   const [careerData, setCareerData] = useState<{
     [key: string]: string;
