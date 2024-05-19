@@ -1,3 +1,5 @@
+
+// function that makes a call to the OpenAI API to generate a response based on a prompt
 export async function generateCareer(
   questions: string[],
   answers: string[]
@@ -23,7 +25,7 @@ export async function generateCareer(
 
   let attempts = 0;
   while (attempts < 3) {
-    // retry up to 3 times
+    // Error handling: retry up to 3 times 
     try {
       const completion = await openai.chat.completions.create({
         response_format: { type: "json_object" },
@@ -57,6 +59,7 @@ export async function generateCareer(
   return "";
 }
 
+// A function to make a call to the DALL-E API to generate an image based on a prompt
 export async function generateImage(prompt: string): Promise<string> {
   const OpenAI = require("openai");
 

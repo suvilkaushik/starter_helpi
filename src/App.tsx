@@ -34,7 +34,7 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-
+  // AI Generated Code: This checks if the user is trying to leave the page and will give a warning before they do
   useEffect(() => {
     const handleBeforeUnload = (event: {
       preventDefault: () => void;
